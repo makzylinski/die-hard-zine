@@ -1,1 +1,18 @@
-<p>news works!</p>
+<app-page-content>
+    <div class="news">
+        <div class="row">
+            <div class="col-sm-12 col-md-3" *ngFor="let n of news">
+                <div class="single-news" (click)="goToNews(n)">
+                    <img [src]="n.photoUrl" [alt]="n.headline">
+                    <div class="news-content">
+                        <h3>{{ n.headline }}</h3>
+                        <p>{{ n.content }}</p>
+                        <small>{{ n.author }}, {{ n.date | date }}</small>
+                    </div>
+                </div>
+            </div>          
+        </div>
+    </div>
+</app-page-content>
+
+<router-outlet></router-outlet>

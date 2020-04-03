@@ -17,6 +17,7 @@ import { InterviewDetailComponent } from './interview/interview-detail/interview
 import { EventReportsComponent } from './event-reports/event-reports/event-reports.component';
 import { EventReportDetailComponent } from './event-reports/event-report-detail/event-report-detail.component';
 import { ConcertCalendarComponent } from './concert-calendar/concert-calendar/concert-calendar.component';
+import { PageContentComponent } from './shared/page-content/page-content.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ConcertCalendarComponent } from './concert-calendar/concert-calendar/co
     InterviewDetailComponent,
     EventReportsComponent,
     EventReportDetailComponent,
-    ConcertCalendarComponent
+    ConcertCalendarComponent,
+    PageContentComponent
   ],
   imports: [
     BrowserModule,

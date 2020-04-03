@@ -16,9 +16,8 @@ import { ConcertCalendarComponent } from './concert-calendar/concert-calendar/co
 
 const appRoutes = [
     { path: '', component: HomeComponent},
-    { path: 'news', component: NewsComponent, children: [
-        { path: ':id', component: NewsDetailComponent }
-    ]},
+    { path: 'news', component: NewsComponent},
+    { path: 'news/:id', component: NewsDetailComponent},
     { path: 'reviews', component: ReviewsComponent, children: [
         { path: ':id', component: ReviewDetailComponent }
     ]},
