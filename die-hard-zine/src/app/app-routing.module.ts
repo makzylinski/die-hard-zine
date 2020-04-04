@@ -13,11 +13,12 @@ import { InterviewDetailComponent } from './interview/interview-detail/interview
 import { EventReportsComponent } from './event-reports/event-reports/event-reports.component';
 import { EventReportDetailComponent } from './event-reports/event-report-detail/event-report-detail.component';
 import { ConcertCalendarComponent } from './concert-calendar/concert-calendar/concert-calendar.component';
+import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 
 const appRoutes = [
     { path: '', component: HomeComponent},
-    { path: 'news', component: NewsComponent},
-    { path: 'news/:id', component: NewsDetailComponent},
+    { path: 'news', component: NewsComponent },
+    { path: 'news/:id', component: NewsDetailComponent },
     { path: 'reviews', component: ReviewsComponent, children: [
         { path: ':id', component: ReviewDetailComponent }
     ]},
@@ -29,7 +30,8 @@ const appRoutes = [
     ]},
     { path: 'calendar', component: ConcertCalendarComponent },
     { path: 'about', component: AboutUsComponent},
-    { path: 'contact', component: ContactComponent}
+    { path: 'contact', component: ContactComponent},
+    { path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({

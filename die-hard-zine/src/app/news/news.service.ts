@@ -6,45 +6,52 @@ import { Subject } from 'rxjs';
 export class NewsService {
     news: News[] = [
         new News(
+        0,
+        new Date(1, 10, 2020),
+        'Max Rabid',
+        'Chollerka jasna gdzie moje gacie [Zobacz zdjęcia]',
+        'Sobala oszalał!',
+        'https://pbs.twimg.com/media/D-xnpmRX4AECmKW.jpg'),
+        new News(
         1,
         new Date(1, 10, 2020),
         'Max Rabid',
         'Sobala w areszcie! [Zobacz zdjęcia]',
         'Sobala oszalał!',
-        'pornhub.com'),
+        'https://pbs.twimg.com/media/D-xnpmRX4AECmKW.jpg'),
 
         new News(
-            1,
-            new Date(1, 10, 2020),
-            'Dark Łukasz',
-            'Max ruwniesz oszalał [SZOK]',
-            'No poprosu szok dla mnie lol',
-            'plicja.pl'
+        2,
+        new Date(1, 10, 2020),
+        'Dark Łukasz',
+        'Max ruwniesz oszalał [SZOK]',
+        'No poprosu szok dla mnie lolNo poprosu szok dla mnie lol',
+        'https://pbs.twimg.com/media/D-xnpmRX4AECmKW.jpg'
         ),
 
         new News(
-            1,
-            new Date(1, 10, 2020),
-            'Max Rabid',
-            'Sobala w areszcie! [Zobacz zdjęcia]',
-            'Sobala oszalał!',
-            'pornhub.com'),
+        3,
+        new Date(1, 10, 2020),
+        'Max Rabid',
+        'Sobala w areszcie! [Zobacz zdjęcia]',
+        'Sobala oszalał! asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd',
+        'https://pbs.twimg.com/media/D-xnpmRX4AECmKW.jpg'),
 
         new News(
-            1,
-            new Date(1, 10, 2020),
-            'Max Rabid',
-            'Sobala w areszcie! [Zobacz zdjęcia]',
-            'Sobala oszalał!',
-            'https://pbs.twimg.com/media/D-xnpmRX4AECmKW.jpg'),
+        4,
+        new Date(1, 10, 2020),
+        'Max Rabid',
+        'Sobala w areszcie! [Zobacz zdjęcia]',
+        'Sobala oszalał!',
+        'https://pbs.twimg.com/media/D-xnpmRX4AECmKW.jpg'),
 
         new News(
-            1,
-            new Date(1, 10, 2020),
-            'Max Rabid',
-            'Sobala w areszcie! [Zobacz zdjęcia]',
-            'Sobala oszalał!',
-            'pornhub.com'),
+        5,
+        new Date(1, 10, 2020),
+        'Max Rabid',
+        'Sobala w areszcie! [Zobacz zdjęcia]',
+        'Sobala oszalał!',
+        'https://pbs.twimg.com/media/D-xnpmRX4AECmKW.jpg'),
     ];
 
     singleNews: Subject<News>;
@@ -55,7 +62,7 @@ export class NewsService {
         return this.news.slice();
     }
 
-    showFullNews(news: News) {
-        this.singleNews.next(news);
+    getSingleNews(id: number) {
+        return this.news[id];
     }
 }

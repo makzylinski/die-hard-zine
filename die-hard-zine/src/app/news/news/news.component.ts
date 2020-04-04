@@ -19,12 +19,9 @@ export class NewsComponent implements OnInit {
     console.log(this.newsService.getNewsArray());
   }
 
-  goToNews(news) {
-    this.route.params.subscribe(
-      (params: Params) => {
-        console.log(params);
-      }
-    )
+  goToNews(id: number) {
+    console.log(id);
+    this.router.navigate(['news', id]);
   }
 
 }

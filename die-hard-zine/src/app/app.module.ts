@@ -18,6 +18,8 @@ import { EventReportsComponent } from './event-reports/event-reports/event-repor
 import { EventReportDetailComponent } from './event-reports/event-report-detail/event-report-detail.component';
 import { ConcertCalendarComponent } from './concert-calendar/concert-calendar/concert-calendar.component';
 import { PageContentComponent } from './shared/page-content/page-content.component';
+import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+import { SidebarComponent } from './shared/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { PageContentComponent } from './shared/page-content/page-content.compone
     EventReportsComponent,
     EventReportDetailComponent,
     ConcertCalendarComponent,
-    PageContentComponent
+    PageContentComponent,
+    PageNotFoundComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
