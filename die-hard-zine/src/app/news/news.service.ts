@@ -10,7 +10,7 @@ export class NewsService {
         new Date(1, 10, 2020),
         'Max Rabid',
         'Chollerka jasna gdzie moje gacie [Zobacz zdjęcia]',
-        'Sobala oszalał!',
+        'asdasdasdasdasd',
         'https://pbs.twimg.com/media/D-xnpmRX4AECmKW.jpg'),
         new News(
         1,
