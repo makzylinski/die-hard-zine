@@ -1,1 +1,16 @@
-<p>news works!</p>
+<app-page-content>
+    <div class="news-section">
+        <div class="row">
+            <div class="col-sm-12 col-md-3" *ngFor="let n of news" (click)="goToNews(n.id)">
+                <div class="single-news">
+                    <img [src]="n.photoUrl" [alt]="n.headline">
+                    <div class="news-content">
+                        <h3>{{ n.headline }}</h3>
+                        <p>{{ n.content }}</p>
+                        <small>{{ n.author }}, {{ n.date | date }}</small>
+                    </div>
+                </div>
+            </div>          
+        </div>
+    </div>
+</app-page-content>
