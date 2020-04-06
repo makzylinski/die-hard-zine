@@ -13,6 +13,7 @@ import { NewsEditComponent } from './news-edit/news-edit.component';
 import { ReviewsEditComponent } from './reviews-edit/reviews-edit.component';
 import { PatronageEditComponent } from './patronage-edit/patronage-edit.component';
 import { ArticlesListComponent } from './articles-list/articles-list.component';
+import { ModalComponent } from './shared/modal/modal.component';
 
 @NgModule({
     declarations: [
@@ -24,7 +25,8 @@ import { ArticlesListComponent } from './articles-list/articles-list.component';
         NewsEditComponent,
         ReviewsEditComponent,
         PatronageEditComponent,
-        ArticlesListComponent
+        ArticlesListComponent,
+        ModalComponent
     ],
     imports: [
         RouterModule,

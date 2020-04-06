@@ -20,4 +20,11 @@
             </li>
         </ul>
     </div>
+
+    <app-modal 
+        *ngIf="modalFired"
+        [message]="'Czy na pewno chcesz usunąć wybrany element?'"
+        (articleId)="i"
+        (modalClose)="modalFired = false"
+        (deleteItem)="onDeleteItemModal($event)"></app-modal>
 </div>

@@ -17,6 +17,7 @@ export class ArticlesListComponent implements OnInit, OnDestroy {
 
   paramsSub: Subscription;
   articles: EventReport[] | Patronage[] | Interview[] | News[] | Review[];
+  modalFired = false;
 
   constructor(private route: ActivatedRoute,
               private adminService: AdminService) { }
@@ -36,10 +37,14 @@ export class ArticlesListComponent implements OnInit, OnDestroy {
 
   onDelete(id: number) {
     console.log(id);
-    console.log(this.route.snapshot.params.name);
+    this.modalFired = true;
     const paramsName = this.route.snapshot.params.name;
     this.adminService.deleteArticle(id, paramsName);
     this.articles = this.adminService.getArticle(paramsName);
+  }
+
+  onDeleteItemModal(isConfirmed: boolean) {
+    console.log(isConfirmed);
   }
 
   ngOnDestroy() {
