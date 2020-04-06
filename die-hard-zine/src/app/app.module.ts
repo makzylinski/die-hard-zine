@@ -1,15 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AppRoutingModule } from './app-routing.module';
+import { AdminModule } from './admin-panel/admin.module';
+
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { AppRoutingModule } from './app-routing.module';
 import { FooterComponent } from './shared/footer/footer.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-import { NewsComponent } from './news/news/news.component';
-import { ReviewsComponent } from './reviews/reviews/reviews.component';
-import { NewsDetailComponent } from './news/news-detail/news-detail.component';
-import { ReviewDetailComponent } from './reviews/review-detail/review-detail.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { InterviewComponent } from './interview/interview/interview.component';
@@ -17,9 +15,14 @@ import { InterviewDetailComponent } from './interview/interview-detail/interview
 import { EventReportsComponent } from './event-reports/event-reports/event-reports.component';
 import { EventReportDetailComponent } from './event-reports/event-report-detail/event-report-detail.component';
 import { ConcertCalendarComponent } from './concert-calendar/concert-calendar/concert-calendar.component';
-import { PageContentComponent } from './shared/page-content/page-content.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { ReviewsComponent } from './reviews/reviews/reviews.component';
+import { ReviewDetailComponent } from './reviews/review-detail/review-detail.component';
+import { NewsComponent } from './news/news/news.component';
+import { NewsDetailComponent } from './news/news-detail/news-detail.component';
+import { PageContentComponent } from './shared/page-content/page-content.component';
+import { PatronageComponent } from './patronage/patronage/patronage.component';
 
 @NgModule({
   declarations: [
@@ -27,10 +30,6 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     HomeComponent,
     FooterComponent,
     NavbarComponent,
-    NewsComponent,
-    ReviewsComponent,
-    NewsDetailComponent,
-    ReviewDetailComponent,
     AboutUsComponent,
     ContactComponent,
     InterviewComponent,
@@ -38,12 +37,18 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
     EventReportsComponent,
     EventReportDetailComponent,
     ConcertCalendarComponent,
-    PageContentComponent,
     PageNotFoundComponent,
-    SidebarComponent
+    SidebarComponent,
+    ReviewsComponent,
+    ReviewDetailComponent,
+    NewsComponent,
+    NewsDetailComponent,
+    PageContentComponent,
+    PatronageComponent
   ],
   imports: [
     BrowserModule,
+    AdminModule,
     AppRoutingModule
   ],
   providers: [],
