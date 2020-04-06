@@ -14,4 +14,8 @@ export class EventReportService {
             'https://d-art.ppstatic.pl/kadry/k/r/d8/73/57c063084d86e_o_full.jpg'
         )
     ];
+
+    deleteReport(id: number) {
+        this.eventReports.splice(id, 1);
+    }
 }

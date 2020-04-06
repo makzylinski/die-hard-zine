@@ -21,8 +21,4 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
   }
 
-  goToSection(route: string) {
-    console.log(route);
-  }
-
 }

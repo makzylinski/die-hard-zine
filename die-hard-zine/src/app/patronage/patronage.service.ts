@@ -14,4 +14,8 @@ export class PatronageService {
             'https://www.lepszypoznan.pl/wp-content/uploads/2018/06/9edfk0.jpg'
         )
     ];
+
+    deletePatronage(id: number) {
+        this.patronages.splice(id, 1);
+    }
 }

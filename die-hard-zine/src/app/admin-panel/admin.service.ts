@@ -34,7 +34,30 @@ export class AdminService {
                 return this.patronageService.patronages.slice();
 
             default:
-                return 'Niewiasdomo';
+                return;
+        }
+    }
+
+    deleteArticle(id: number, articleSection: string) {
+        console.log(id + articleSection);
+        switch (articleSection) {
+            case 'interviews':
+                return this.interviewService.deleteInterview(id);
+
+            case 'news':
+                return this.newsService.deleteNews(id);
+
+            case 'reviews':
+                return this.reviewsService.deleteReview(id);
+
+            case 'event-reports':
+                return this.eventReportsService.deleteReport(id);
+
+            case 'patronage':
+                return this.patronageService.deletePatronage(id);
+
+            default:
+                return;
         }
     }
 

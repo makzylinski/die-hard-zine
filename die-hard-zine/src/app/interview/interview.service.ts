@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Interview } from './interview.model';
+import { Subject } from 'rxjs';
 
 @Injectable({providedIn: 'root'})
 
 export class InterviewService {
+
     interviews: Interview[] = [
         new Interview(
-            1,
+            0,
             new Date(2020, 10, 4),
             'Max Rabid',
             'Martyrdod - wywiad',
@@ -14,5 +16,9 @@ export class InterviewService {
             'https://i.ytimg.com/vi/0oq0NWA2gCg/maxresdefault.jpg'
         )
     ];
+
+    deleteInterview(id: number) {
+        this.interviews.splice(id, 1);
+    }
 }
 

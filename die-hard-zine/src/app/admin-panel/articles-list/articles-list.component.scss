@@ -1,0 +1,23 @@
+.articles-container {
+    .articles-body {
+        margin: 10px;
+
+        .list-group {
+            margin: 10px 0;
+            
+            .list-group-item {
+                &:hover {
+                    color: white;
+                    background: darkblue;
+                }
+
+                .actions {
+                    display: inline-block;
+                    float: right;
+                    cursor: pointer;
+                }
+            }
+            
+        }
+    }
+}

@@ -2,8 +2,7 @@
     <div class="sidebar">
         <ul class="list-group" *ngFor="let page of pages">
             <li 
-                class="list-group-item" 
-                (click)="goToSection(page.route)"
+                class="list-group-item"
                 [routerLink]="['/__admin', page.route]">
                 <span>{{ page.name }}</span>
                 <span class="material-icons">
