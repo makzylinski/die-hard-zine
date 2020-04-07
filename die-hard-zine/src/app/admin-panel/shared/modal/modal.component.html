@@ -1,0 +1,14 @@
+<div class="background" (click)="onClose()"></div>
+
+<div class="modal-container">
+    <div class="modal-header">
+        {{ message }}
+        <span class="material-icons" (click)="onClose()">
+            clear
+        </span>
+    </div>
+    <div class="modal-body">
+        <button class="btn btn-success" (click)="onDelete()">Usuń</button>
+        <button class="btn btn-danger" (click)="onClose()">Anuluj</button>
+    </div>
+</div>

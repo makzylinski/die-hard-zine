@@ -14,6 +14,7 @@ import { EventReportsComponent } from './event-reports/event-reports/event-repor
 import { EventReportDetailComponent } from './event-reports/event-report-detail/event-report-detail.component';
 import { ConcertCalendarComponent } from './concert-calendar/concert-calendar/concert-calendar.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+import { PatronageComponent } from './patronage/patronage/patronage.component';
 
 const appRoutes = [
     { path: '', component: HomeComponent},
@@ -28,6 +29,7 @@ const appRoutes = [
     { path: 'event-reports', component: EventReportsComponent, children: [
         { path: ':id', component: EventReportDetailComponent}
     ]},
+    { path: 'patronage', component: PatronageComponent},
     { path: 'calendar', component: ConcertCalendarComponent },
     { path: 'about', component: AboutUsComponent},
     { path: 'contact', component: ContactComponent},

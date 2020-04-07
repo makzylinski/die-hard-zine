@@ -1,0 +1,30 @@
+<div class="articles-container">
+    <div class="articles-body">
+        <ul class="list-group" *ngFor="let article of articles; let i = index">
+            <li class="list-group-item">
+                {{ article.headline }}
+
+                <div class="actions">
+                    <span 
+                        class="material-icons" 
+                        (click)="onEdit(article)">
+                        edit
+                    </span>
+                    <span 
+                        class="material-icons" 
+                        (click)="onDelete(i)">
+                        delete
+                    </span>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+
+    <app-modal 
+        *ngIf="modalFired"
+        [message]="'Czy na pewno chcesz usunąć wybrany element?'"
+        [articleId]="inputId"
+        (modalClose)="modalFired = false"
+        (deleteItem)="onDeleteItemModal()"></app-modal>
+</div>

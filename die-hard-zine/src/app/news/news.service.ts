@@ -65,4 +65,8 @@ export class NewsService {
     getSingleNews(id: number) {
         return this.news[id];
     }
+
+    deleteNews(id: number) {
+        this.news.splice(id, 1);
+    }
 }
