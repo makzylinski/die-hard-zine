@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AdminService } from './../admin.service';
 import { EventReport } from 'src/app/event-reports/event-report.model';
@@ -18,9 +18,11 @@ export class ArticlesListComponent implements OnInit, OnDestroy {
   paramsSub: Subscription;
   articles: EventReport[] | Patronage[] | Interview[] | News[] | Review[];
   modalFired = false;
+  inputId: number;
 
   constructor(private route: ActivatedRoute,
-              private adminService: AdminService) { }
+              private adminService: AdminService,
+              private router: Router) { }
 
   ngOnInit() {
     this.paramsSub = this.route.params.subscribe(
@@ -33,18 +35,18 @@ export class ArticlesListComponent implements OnInit, OnDestroy {
 
   onEdit(article) {
     console.log(article);
+    const activeRoute = this.route.snapshot.params.name;
+    this.router.navigate(['__admin/' + activeRoute + '-edit/' + article.id]);
   }
 
   onDelete(id: number) {
     console.log(id);
+    this.inputId = id;
     this.modalFired = true;
-    const paramsName = this.route.snapshot.params.name;
-    this.adminService.deleteArticle(id, paramsName);
-    this.articles = this.adminService.getArticle(paramsName);
   }
 
-  onDeleteItemModal(isConfirmed: boolean) {
-    console.log(isConfirmed);
+  onDeleteItemModal() {
+    this.articles = this.adminService.getArticle(this.route.snapshot.params.name);
   }
 
   ngOnDestroy() {

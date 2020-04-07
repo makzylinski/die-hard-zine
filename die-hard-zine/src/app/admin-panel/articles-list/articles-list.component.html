@@ -24,7 +24,7 @@
     <app-modal 
         *ngIf="modalFired"
         [message]="'Czy na pewno chcesz usunąć wybrany element?'"
-        (articleId)="i"
+        [articleId]="inputId"
         (modalClose)="modalFired = false"
-        (deleteItem)="onDeleteItemModal($event)"></app-modal>
+        (deleteItem)="onDeleteItemModal()"></app-modal>
 </div>
