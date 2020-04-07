@@ -1,1 +1,49 @@
-<p>patronage-edit works!</p>
+<app-page-content>
+    <div class="interview-edit-container">
+        <div class="row">
+            <div class="col-xs-10 offset-md-1">
+                <form [formGroup]="patronageForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group" >
+                        <label for="author">Author</label>
+                        <input 
+                            type="text"
+                            id="author"
+                            formControlName="author"
+                            class="form-control">
+                    </div>
+                                            
+                    <div class="form-group">
+                        <label for="headline">Headline</label>
+                        <input 
+                            type="text"
+                            id="headline"
+                            formControlName="headline"
+                            class="form-control">
+                    </div>
+                                            
+                    <div class="form-group">
+                        <label for="photo">Photo</label>
+                        <input 
+                            type="text"
+                            id="photo"
+                            formControlName="photo"
+                            class="form-control">
+                    </div>
+                                            
+                    <div class="form-group">
+                        <label for="content">Content</label>
+                        <textarea 
+                            type="text"
+                            id="content"
+                            formControlName="content"
+                            class="form-control"
+                            rows="4">
+                        </textarea>
+                    </div>
+                    <button class="btn btn-success" type="submit">Save changes!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</app-page-content>
+            

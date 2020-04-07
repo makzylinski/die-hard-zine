@@ -6,7 +6,7 @@ import { Patronage } from './patronage.model';
 export class PatronageService {
     patronages: Patronage[] = [
         new Patronage(
-            1,
+            0,
             new Date(2022, 3, 1),
             'Max Rabid',
             'Pierwszy koncert po pandemii',
@@ -17,5 +17,13 @@ export class PatronageService {
 
     deletePatronage(id: number) {
         this.patronages.splice(id, 1);
+    }
+
+    getSinglePatronage(id: number) {
+        return this.patronages[id];
+    }
+
+    updatePatronage(id: number, editedPatronage: Patronage) {
+        this.patronages[id] = editedPatronage;
     }
 }
