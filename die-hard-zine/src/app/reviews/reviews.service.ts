@@ -42,5 +42,9 @@ export class ReviewsService {
     updateReview(id: number, updatedReview: Review) {
         this.reviews[id] = updatedReview;
     }
+
+    addNewReview(newReview: Review) {
+        this.reviews.push(newReview);
+    }
 }
 

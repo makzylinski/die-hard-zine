@@ -73,4 +73,8 @@ export class NewsService {
     updateNews(id: number, editedNews: News) {
         this.news[id] = editedNews;
     }
+
+    addNewNews(news: News) {
+        this.news.push(news);
+    }
 }

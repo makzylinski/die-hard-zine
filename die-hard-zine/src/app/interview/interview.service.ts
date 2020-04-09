@@ -28,5 +28,9 @@ export class InterviewService {
     updateInterview(id: number, editedInterview: Interview) {
         this.interviews[id] = editedInterview;
     }
+
+    addNewInterview(interview: Interview) {
+        this.interviews.push(interview);
+    }
 }
 

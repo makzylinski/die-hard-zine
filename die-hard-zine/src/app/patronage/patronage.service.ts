@@ -26,4 +26,8 @@ export class PatronageService {
     updatePatronage(id: number, editedPatronage: Patronage) {
         this.patronages[id] = editedPatronage;
     }
+
+    addNewPatronage(newPatronage: Patronage) {
+        this.patronages.push(newPatronage);
+    }
 }

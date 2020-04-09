@@ -26,4 +26,8 @@ export class EventReportService {
     updateEventReport(id: number, updatedEventReport: EventReport) {
         this.eventReports[id] = updatedEventReport;
     }
+
+    addNewEventReport(newEventReport: EventReport) {
+        this.eventReports.push(newEventReport);
+    }
 }
