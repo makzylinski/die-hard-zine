@@ -124,7 +124,7 @@ export class AdminService {
                 newArt.content,
                 newArt.photoUrl
                 );
-                return this.patronageService.addNewPatronage(newPatronage);
+                return this.patronageService.addNewPatronage(newPatronage); 
         }
     }
 
