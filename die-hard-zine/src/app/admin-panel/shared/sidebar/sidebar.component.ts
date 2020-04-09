@@ -13,7 +13,8 @@ export class SidebarComponent implements OnInit {
     { name: 'Event Reports', route: 'event-reports'},
     { name: 'News', route: 'news'},
     { name: 'Reviews', route: 'reviews'},
-    { name: 'Patronage', route: 'patronage'}
+    { name: 'Patronage', route: 'patronage'},
+    { name: 'Add new article', route: 'new'}
   ];
 
   constructor(private router: Router, private route: ActivatedRoute) { }

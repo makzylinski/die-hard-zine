@@ -20,5 +20,17 @@ export class InterviewService {
     deleteInterview(id: number) {
         this.interviews.splice(id, 1);
     }
+
+    getInterview(id: number) {
+        return this.interviews[id];
+    }
+
+    updateInterview(id: number, editedInterview: Interview) {
+        this.interviews[id] = editedInterview;
+    }
+
+    addNewInterview(interview: Interview) {
+        this.interviews.push(interview);
+    }
 }
 

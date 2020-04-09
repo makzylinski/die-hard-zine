@@ -69,4 +69,12 @@ export class NewsService {
     deleteNews(id: number) {
         this.news.splice(id, 1);
     }
+
+    updateNews(id: number, editedNews: News) {
+        this.news[id] = editedNews;
+    }
+
+    addNewNews(news: News) {
+        this.news.push(news);
+    }
 }

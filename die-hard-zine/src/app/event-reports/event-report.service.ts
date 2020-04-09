@@ -6,7 +6,7 @@ import { EventReport } from './event-report.model';
 export class EventReportService {
     eventReports: EventReport[] = [
         new EventReport(
-            1,
+            0,
             new Date(2020, 2, 2),
             'Max Rabid',
             'Ostatni koncert?',
@@ -17,5 +17,17 @@ export class EventReportService {
 
     deleteReport(id: number) {
         this.eventReports.splice(id, 1);
+    }
+
+    getEventReport(id: number) {
+        return this.eventReports[id];
+    }
+
+    updateEventReport(id: number, updatedEventReport: EventReport) {
+        this.eventReports[id] = updatedEventReport;
+    }
+
+    addNewEventReport(newEventReport: EventReport) {
+        this.eventReports.push(newEventReport);
     }
 }

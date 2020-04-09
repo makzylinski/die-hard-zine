@@ -7,9 +7,11 @@ import { PatronageEditComponent } from './patronage-edit/patronage-edit.componen
 import { ReviewsEditComponent } from './reviews-edit/reviews-edit.component';
 import { InterviewsEditComponent } from './interviews-edit/interviews-edit.component';
 import { EventReportsEditComponent } from './event-reports-edit/event-reports-edit.component';
+import { NewArticleComponent } from './new-article/new-article.component';
 
 const routes: Routes = [
     { path: '__admin', component: AdminPanelComponent, children: [
+        { path: 'new', component: NewArticleComponent},
         { path: ':name', component: ArticlesListComponent },
         { path: 'news-edit/:id', component: NewsEditComponent },
         { path: 'patronage-edit/:id', component: PatronageEditComponent },

@@ -2,7 +2,24 @@
     <div class="interview-edit-container">
         <div class="row">
             <div class="col-xs-10 offset-md-1">
-                <form [formGroup]="patronageForm" (ngSubmit)="onSubmit()">
+                <form [formGroup]="newForm" (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label for="article">Article type</label>
+                        <select 
+                            name="articleType" 
+                            id="articleType"
+                            class="form-control"
+                            formControlName="articleType"
+                            >
+                            <option value="interviews">Interview</option>
+                            <option value="event-reports">Event Report</option>
+                            <option value="news">News</option>
+                            <option value="reviews">Reviews</option>
+                            <option value="patronage">Patronage</option>
+                        </select>
+                    </div>
+
                     <div class="form-group" >
                         <label for="author">Author</label>
                         <input 
@@ -11,7 +28,7 @@
                             formControlName="author"
                             class="form-control">
                     </div>
-                                            
+                                        
                     <div class="form-group">
                         <label for="headline">Headline</label>
                         <input 
@@ -20,7 +37,7 @@
                             formControlName="headline"
                             class="form-control">
                     </div>
-                                            
+                                        
                     <div class="form-group">
                         <label for="photo">Photo</label>
                         <input 
@@ -29,7 +46,7 @@
                             formControlName="photo"
                             class="form-control">
                     </div>
-                                            
+                                        
                     <div class="form-group">
                         <label for="content">Content</label>
                         <textarea 
@@ -46,4 +63,4 @@
         </div>
     </div>
 </app-page-content>
-            
+        

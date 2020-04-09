@@ -5,6 +5,11 @@ import { NewsService } from '../news/news.service';
 import { ReviewsService } from '../reviews/reviews.service';
 import { EventReportService } from '../event-reports/event-report.service';
 import { PatronageService } from '../patronage/patronage.service';
+import { Interview } from '../interview/interview.model';
+import { EventReport } from '../event-reports/event-report.model';
+import { News } from '../news/news.model';
+import { Review } from '../reviews/reviews.model';
+import { Patronage } from '../patronage/patronage.model';
 
 @Injectable({providedIn: 'root'})
 
@@ -58,6 +63,68 @@ export class AdminService {
 
             default:
                 return;
+        }
+    }
+
+    addNewArticle(typeArt: string, newArt: {author: string, headline: string, content: string, photoUrl: string}) {
+        console.log(typeArt, newArt);
+
+        switch (typeArt) {
+            case 'interviews':
+                const newInterview = new Interview(
+                this.interviewService.interviews.length,
+                new Date(),
+                newArt.author,
+                newArt.headline,
+                newArt.content,
+                newArt.photoUrl
+              );
+
+                return this.interviewService.addNewInterview(newInterview);
+
+            case 'event-reports':
+                const newEventReport = new EventReport(
+                this.eventReportsService.eventReports.length,
+                new Date(),
+                newArt.author,
+                newArt.headline,
+                newArt.content,
+                newArt.photoUrl
+              );
+                return this.eventReportsService.addNewEventReport(newEventReport);
+
+            case 'news':
+                const newNews = new News(
+                this.newsService.news.length,
+                new Date(),
+                newArt.author,
+                newArt.headline,
+                newArt.content,
+                newArt.photoUrl
+                );
+                return this.newsService.addNewNews(newNews);
+
+            case 'reviews':
+                const newReview = new Review(
+                this.reviewsService.reviews.length,
+                new Date(),
+                newArt.author,
+                newArt.headline,
+                newArt.content,
+                newArt.photoUrl
+                );
+                return this.reviewsService.addNewReview(newReview);
+
+                case 'patronage':
+                const newPatronage = new Patronage(
+                this.patronageService.patronages.length,
+                new Date(),
+                newArt.author,
+                newArt.headline,
+                newArt.content,
+                newArt.photoUrl
+                );
+                return this.patronageService.addNewPatronage(newPatronage);
         }
     }
 

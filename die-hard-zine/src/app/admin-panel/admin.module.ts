@@ -14,6 +14,9 @@ import { ReviewsEditComponent } from './reviews-edit/reviews-edit.component';
 import { PatronageEditComponent } from './patronage-edit/patronage-edit.component';
 import { ArticlesListComponent } from './articles-list/articles-list.component';
 import { ModalComponent } from './shared/modal/modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PageContentComponent } from './shared/page-content/page-content.component';
+import { NewArticleComponent } from './new-article/new-article.component';
 
 @NgModule({
     declarations: [
@@ -26,12 +29,15 @@ import { ModalComponent } from './shared/modal/modal.component';
         ReviewsEditComponent,
         PatronageEditComponent,
         ArticlesListComponent,
-        ModalComponent
+        ModalComponent,
+        PageContentComponent,
+        NewArticleComponent
     ],
     imports: [
         RouterModule,
         CommonModule,
-        AdminRoutingModule
+        AdminRoutingModule,
+        ReactiveFormsModule
     ],
     exports: [
         AdminPanelComponent,
