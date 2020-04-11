@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { EventReport } from '../event-report.model';
+import { EventReportService } from '../event-report.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-event-report-detail',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventReportDetailComponent implements OnInit {
 
-  constructor() { }
+  currentEventDetail: EventReport;
+
+  constructor(private eventReportService: EventReportService,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.currentEventDetail = this.eventReportService.getEventReport(this.route.snapshot.params.id);
   }
 
 }

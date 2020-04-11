@@ -15,22 +15,20 @@ import { EventReportDetailComponent } from './event-reports/event-report-detail/
 import { ConcertCalendarComponent } from './concert-calendar/concert-calendar/concert-calendar.component';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 import { PatronageComponent } from './patronage/patronage/patronage.component';
+import { PatronageDetailComponent } from './patronage/patronage-detail/patronage-detail.component';
 
 const appRoutes = [
     { path: '', component: HomeComponent},
     { path: 'news', component: NewsComponent },
     { path: 'news/:id', component: NewsDetailComponent },
-    { path: 'reviews', component: ReviewsComponent, children: [
-        { path: ':id', component: ReviewDetailComponent }
-    ]},
-    { path: 'interview', component: InterviewComponent, children: [
-        { path: ':id', component: InterviewDetailComponent }
-     ]},
-    { path: 'event-reports', component: EventReportsComponent, children: [
-        { path: ':id', component: EventReportDetailComponent}
-    ]},
+    { path: 'reviews', component: ReviewsComponent },
+    { path: 'reviews/:id', component: ReviewDetailComponent },
+    { path: 'interview', component: InterviewComponent},
+    { path: 'interview/:id', component: InterviewDetailComponent },
+    { path: 'event-reports', component: EventReportsComponent },
+    { path: 'event-reports/:id', component: EventReportDetailComponent },
     { path: 'patronage', component: PatronageComponent},
-    { path: 'calendar', component: ConcertCalendarComponent },
+    { path: 'patronage/:id', component: PatronageDetailComponent},
     { path: 'about', component: AboutUsComponent},
     { path: 'contact', component: ContactComponent},
     { path: '**', component: PageNotFoundComponent}

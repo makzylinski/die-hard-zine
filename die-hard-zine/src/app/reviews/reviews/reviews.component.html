@@ -1,1 +1,16 @@
-<p>reviews works!</p>
+<app-page-content>
+    <div class="reviews-section">
+        <div class="row">
+            <div class="col-sm-12 col-md-3" *ngFor="let review of reviews" (click)="goToReview(review.id)">
+                <div class="single-review">
+                    <img [src]="review.photoUrl" [alt]="review.headline">
+                    <div class="review-content">
+                        <h3>{{ review.headline }}</h3>
+                        <p>{{ review.content }}</p>
+                        <small>{{ review.author }}, {{ review.date | date }}</small>
+                    </div>
+                </div>
+            </div>          
+        </div>
+    </div>
+</app-page-content>

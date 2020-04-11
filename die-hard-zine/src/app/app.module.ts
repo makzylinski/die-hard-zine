@@ -23,6 +23,7 @@ import { NewsComponent } from './news/news/news.component';
 import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { PageContentComponent } from './shared/page-content/page-content.component';
 import { PatronageComponent } from './patronage/patronage/patronage.component';
+import { PatronageDetailComponent } from './patronage/patronage-detail/patronage-detail.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { PatronageComponent } from './patronage/patronage/patronage.component';
     NewsComponent,
     NewsDetailComponent,
     PageContentComponent,
-    PatronageComponent
+    PatronageComponent,
+    PatronageDetailComponent
   ],
   imports: [
     BrowserModule,
