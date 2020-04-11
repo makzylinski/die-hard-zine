@@ -1,0 +1,23 @@
+.patronage-section {
+    .single-patronage {
+        border: 1px solid lightgray;
+        cursor: pointer;
+        margin: 12px 0;
+        max-width: 300px;
+        max-height: 350px;
+
+        img {
+            max-width: 200px;
+            max-height: 250px;
+        }
+
+        .patronage-content {
+            max-height: 100px;
+            overflow: hidden;
+        }
+
+        &:hover {
+            background: lightgray;
+        }
+    }
+}

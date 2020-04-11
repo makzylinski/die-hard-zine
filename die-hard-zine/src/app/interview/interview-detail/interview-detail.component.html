@@ -1,1 +1,14 @@
-<p>interview-detail works!</p>
+<app-page-content>
+    <div class="detail-section">
+        <div class="detail-header">
+            <h2>{{ currentInterviewDetail.headline }}</h2>
+            <small>{{ currentInterviewDetail.author }} | {{ currentInterviewDetail.date | date }}</small>
+        </div>
+        <div class="detail-photo">
+            <img [src]="currentInterviewDetail.photoUrl" [alt]="currentInterviewDetail.headline">
+        </div>
+        <div class="detail-content">
+            {{ currentInterviewDetail.content }}
+        </div>
+    </div>
+</app-page-content>
