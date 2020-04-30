@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AdminModule } from './admin-panel/admin.module';
 
@@ -24,6 +26,7 @@ import { NewsDetailComponent } from './news/news-detail/news-detail.component';
 import { PageContentComponent } from './shared/page-content/page-content.component';
 import { PatronageComponent } from './patronage/patronage/patronage.component';
 import { PatronageDetailComponent } from './patronage/patronage-detail/patronage-detail.component';
+import { SliderComponent } from './partials/slider/slider/slider.component';
 
 @NgModule({
   declarations: [
@@ -46,12 +49,14 @@ import { PatronageDetailComponent } from './patronage/patronage-detail/patronage
     NewsDetailComponent,
     PageContentComponent,
     PatronageComponent,
-    PatronageDetailComponent
+    PatronageDetailComponent,
+    SliderComponent
   ],
   imports: [
     BrowserModule,
     AdminModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
