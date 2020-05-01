@@ -1,0 +1,44 @@
+@import '../../../../sass/variables';
+
+.slider-component {
+    .slider {
+        position: relative;
+        width: 100vw;
+        overflow-x: hidden;
+        height: 45vh;
+        background-image: url('../../../../assets/pics/f4acd177-3281-43e1-9dc1-4eaa046ffb7a.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 10%;
+        color: $white;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        .slider-dots {
+            display: flex;
+            align-items: center;
+
+            .slider-dots-container {
+                display: flex;
+                justify-content: space-between;
+                width: 60px;
+                height: 20px;
+                
+                .dot {
+                    width: 8px;
+                    height: 8px;
+                    background: $warm-grey;
+                    border-radius: 50%;
+                }
+    
+                .active {
+                    background: $dandelion;
+                }
+            }
+
+        }
+        
+        
+    }
+}

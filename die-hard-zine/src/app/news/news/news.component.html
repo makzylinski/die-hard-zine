@@ -1,16 +1,29 @@
-<app-page-content>
-    <div class="news-section">
-        <div class="row">
-            <div class="col-sm-12 col-md-3" *ngFor="let n of news" (click)="goToNews(n.id)">
-                <div class="single-news">
-                    <img [src]="n.photoUrl" [alt]="n.headline">
-                    <div class="news-content">
-                        <h3>{{ n.headline }}</h3>
+<div class="news-component">
+    <div class="news-header">
+        <h2 class="news-header-head">
+            <span class="news-header-line"></span>
+            Newsy
+            <span class="news-header-line"></span>
+        </h2>
+    </div>
+
+    <div class="news-items" *ngFor="let n of news">
+        <div class="news-item">
+            <div class="news-item-photo"></div>
+            <div class="news-content">
+                <div class="news-content-meta">
+                    <div class="news-header">
+                        <h2>{{ n.headline }}</h2>
+                    </div>
+                    <div class="news-description">
                         <p>{{ n.content }}</p>
-                        <small>{{ n.author }}, {{ n.date | date }}</small>
                     </div>
                 </div>
-            </div>          
+            </div>
         </div>
     </div>
-</app-page-content>
+
+    <div class="button-container">
+        <button type="button" class="btn-show-more">Pokaż więcej</button>
+    </div>
+</div>

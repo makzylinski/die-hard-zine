@@ -1,0 +1,92 @@
+@import '../../../sass/variables';
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba($color: #000000, $alpha: 0.4);
+}
+
+.navbar {
+    height: 73px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $black;
+    width: 100%;
+    z-index: 1;
+
+    .navbar__main {
+        width: 100%;
+        vertical-align: middle;
+
+        .navbar__items {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+
+            .navbar__item {
+                color: $white;
+                text-decoration: none;
+                list-style: none;
+
+                i {
+                    margin: 8px;
+                }
+            }
+
+            .hamburger {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                
+
+                span {
+                    background: $white;
+                    width: 17px;
+                    height: 2px;
+                    margin: 2px;
+                }
+
+                .ham-nav-short {
+                    width: 14px;
+                }
+            }
+        }
+    }
+
+    .ham-nav--open {
+        width: 60vw;
+        height: 100vh;
+        position: absolute;
+        top: 73px;
+        left: 0;
+        border: 1px solid $black;
+        background: $black;
+        z-index: 1;
+
+        .ham-nav__items {
+            height: 100%;
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .ham-nav__item {
+            a {
+                color: $white;
+                font-size: 1.4rem;
+                text-decoration: none;
+            }
+        }
+    }
+}

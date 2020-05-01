@@ -1,0 +1,88 @@
+@import '../../sass/variables';
+
+.recent-activity-component {
+    margin: 50px 30px;
+    box-sizing: border-box;
+    .activity-header {
+        .activity-header-head {
+            font-size: 24px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: space-between;
+
+            .activity-header-line {
+                border-top: 2px solid $warmer-grey;
+                width: 13px;
+                align-self: center;
+            }
+        }
+    }
+
+    .activity-items {
+        border-bottom: 3px solid $warmer-grey;
+        margin: 35px 0;
+        
+        .activity-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 80vw;
+            
+            .activity-item-photo {
+                width: 100%;
+                height: 160px;
+                background-image: url('../../assets/pics/f4acd177-3281-43e1-9dc1-4eaa046ffb7a.png');
+            }
+
+            .activity-content {
+                width: 100%;
+                margin: 10px 0;
+                overflow-wrap: break-word;
+                
+                .activity-content-meta {
+                    height: 34px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    
+                    .activity-type {
+                        width: 50%;
+                        height: 34px;
+                        background: $black;
+
+                        h2 {
+                        color: $white;
+                        font-size: 24px;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        margin: 0;
+                        }
+                    }
+
+                    .activity-date {
+                        width: 50%;
+                    }
+                }
+
+                .activity-date p {
+                    font-size: 17px;
+                    line-height: 18px;
+                    font-weight: bold;
+                    color: $dark-white;
+                    text-align: left;
+                    padding-left: 15px;
+                    margin: 0;
+                }
+
+                .activity-content-info {
+                    padding: 5px;
+                    font-size: 19px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

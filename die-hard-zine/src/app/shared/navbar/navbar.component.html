@@ -1,39 +1,73 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
-    <!-- Brand -->
-    <a class="navbar-brand" routerLink="">Die Hard Webzine</a>
-  
-    <!-- Links -->
-    <ul class="navbar-nav ">
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/news">News</a>
+<div 
+  [ngClass]="{'backdrop': hamVisible}"
+  (click)="toggleHamNav()"></div>
+<div class="navbar">
+  <nav class="navbar__main">
+    <ul class="navbar__items">
+      <li 
+        class="navbar__item hamburger"
+        (click)="toggleHamNav()">
+        <span></span>
+        <span class="ham-nav-short"></span>
+        <span></span>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/reviews">Recenzje</a>
+      <li class="navbar__item">
+        <a routerLink="" class="logo">Die Hard Magazine</a>
       </li>
 
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/interview">Wywiady</a>
-      </li>
+      <li class="navbar__item">
+        <div class="socials">
+          <div class="fa">
+            <i class="fab fa-facebook fa-lg"></i>
+          </div>
 
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/event-reports">Relacje</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/patronage">Patronaty</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/about">O nas</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/contact">Kontakt</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" routerLink="/__admin">Admin</a>
+          <div class="fa">
+            <i class="fab fa-instagram fa-lg"></i>
+          </div>
+          
+        </div>
       </li>
     </ul>
   </nav>
+
+  <div 
+    class="ham-nav--open"
+    *ngIf="hamVisible"
+    (click)="toggleHamNav()">
+    <ul class="ham-nav__items">
+      <li class="ham-nav__item">
+        <a routerLink="">Strona Główna</a>
+      </li>
+
+      <li class="ham-nav__item">
+        <a routerLink="news">Newsy</a>
+      </li>
+
+      <li class="ham-nav__item">
+        <a routerLink="event-reports">Relacje</a>
+      </li>
+
+      <li class="ham-nav__item">
+        <a routerLink="/reviews">Recenzje</a>
+      </li>
+
+      <li class="ham-nav__item">
+        <a routerLink="interview">Wywiady</a>
+      </li>
+
+      <li class="ham-nav__item">
+        <a routerLink="patronage">Patronaty</a>
+      </li>
+
+      <li class="ham-nav__item">
+        <a routerLink="about">O nas</a>
+      </li>
+
+      <li class="ham-nav__item">
+        <a routerLink="contact">Kontakt</a>
+      </li>
+
+    </ul>
+  </div>
+</div>
