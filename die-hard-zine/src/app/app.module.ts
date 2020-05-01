@@ -27,6 +27,7 @@ import { PageContentComponent } from './shared/page-content/page-content.compone
 import { PatronageComponent } from './patronage/patronage/patronage.component';
 import { PatronageDetailComponent } from './patronage/patronage-detail/patronage-detail.component';
 import { SliderComponent } from './partials/slider/slider/slider.component';
+import { RecentActivityComponent } from './recent-activity/recent-activity.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { SliderComponent } from './partials/slider/slider/slider.component';
     PageContentComponent,
     PatronageComponent,
     PatronageDetailComponent,
-    SliderComponent
+    SliderComponent,
+    RecentActivityComponent
   ],
   imports: [
     BrowserModule,
