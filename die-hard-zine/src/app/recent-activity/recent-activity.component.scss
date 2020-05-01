@@ -1,7 +1,7 @@
 @import '../../sass/variables';
 
 .recent-activity-component {
-    margin: 19px 30px;
+    margin: 50px 30px;
     box-sizing: border-box;
     .activity-header {
         .activity-header-head {
@@ -21,7 +21,7 @@
 
     .activity-items {
         border-bottom: 3px solid $warmer-grey;
-        margin: 15px 0;
+        margin: 35px 0;
         
         .activity-item {
             display: flex;

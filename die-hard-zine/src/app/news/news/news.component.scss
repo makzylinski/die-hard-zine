@@ -1,7 +1,7 @@
 @import '../../../sass/variables';
 
 .news-component {
-    margin: 19px 20px;
+    margin: 50px 20px;
     box-sizing: border-box;
     .news-header {
         .news-header-head {
@@ -20,7 +20,7 @@
     }
 
     .news-items {
-        margin: 15px 0;
+        margin: 50px 0;
         position: relative;
 
         &:after {
