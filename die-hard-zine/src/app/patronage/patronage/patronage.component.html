@@ -1,16 +1,35 @@
 <app-page-content>
-    <div class="patronage-section">
-        <div class="row">
-            <div class="col-sm-12 col-md-3" *ngFor="let patronage of patronages" (click)="goToPatronage(patronage.id)">
-                <div class="single-patronage">
+    <div class="patronage-component">
+        <div class="patronage-header">
+            <h2 class="patronage-header-head">
+                Patronaty
+            </h2>
+        </div>
+    
+        <div class="patronage-items">
+            <div class="patronage-item" *ngFor="let patronage of patronages">
+                <div class="patronage-item-photo">
                     <img [src]="patronage.photoUrl" [alt]="patronage.headline">
-                    <div class="patronage-content">
-                        <h3>{{ patronage.headline }}</h3>
-                        <p>{{ patronage.content }}</p>
-                        <small>{{ patronage.author }}, {{ patronage.date | date }}</small>
+                </div>
+                <div class="patronage-content">
+                    <div class="patronage-content-meta">
+                        
+                        <div class="patronage-date">
+                            <p>{{ patronage.date | date }} </p>
+                        </div>
+                    </div>
+                    <div class="patronage-content-info">
+                        <p class="patronage-info">
+                            {{ patronage.headline }}
+                        </p>
                     </div>
                 </div>
-            </div>          
+            </div>
+        </div>
+    
+        <div class="button-container">
+            <button type="button" class="btn-show-more">Pokaż więcej</button>
         </div>
     </div>
 </app-page-content>
+<app-footer></app-footer>
