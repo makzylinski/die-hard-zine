@@ -1,16 +1,35 @@
 <app-page-content>
-    <div class="interview-section">
-        <div class="row">
-            <div class="col-sm-12 col-md-3" *ngFor="let interview of interviews" (click)="goToInterview(interview.id)">
-                <div class="single-interview">
+    <div class="interview-component">
+        <div class="interview-header">
+            <h2 class="interview-header-head">
+                Wywiady
+            </h2>
+        </div>
+    
+        <div class="interview-items">
+            <div class="interview-item" *ngFor="let interview of interviews">
+                <div class="interview-item-photo">
                     <img [src]="interview.photoUrl" [alt]="interview.headline">
-                    <div class="interview-content">
-                        <h3>{{ interview.headline }}</h3>
-                        <p>{{ interview.content }}</p>
-                        <small>{{ interview.author }}, {{ interview.date | date }}</small>
+                </div>
+                <div class="interview-content">
+                    <div class="interview-content-meta">
+                        
+                        <div class="interview-date">
+                            <p>{{ interview.date | date }} </p>
+                        </div>
+                    </div>
+                    <div class="interview-content-info">
+                        <p class="interview-info">
+                            {{ interview.headline }}
+                        </p>
                     </div>
                 </div>
-            </div>          
+            </div>
+        </div>
+    
+        <div class="button-container">
+            <button type="button" class="btn-show-more">Pokaż więcej</button>
         </div>
     </div>
 </app-page-content>
+<app-footer></app-footer>
