@@ -1,14 +1,23 @@
-.detail-section {
+@import "../../../sass/variables";
 
-    .detail-header {
-        margin-bottom: 5px;
-    }
+.report-detail-component {
+    margin: 50px 30px 70px 30px;
 
-    .detail-photo {
-        
-        img {
-            max-height: 550px;
-            max-width: 75vw;
+    .detail-meta {
+        display: flex;
+        justify-content: space-between;
+        border-top: 2px solid $warm-grey;
+        padding: 10px 0px;
+        color: $dark-white;
+
+        .detail-author {
+            .dot {
+                display: inline-block;
+                height: 10px;
+                width: 10px;
+                border-radius: 50%;
+                background: $dark-white;
+            }
         }
     }
 }

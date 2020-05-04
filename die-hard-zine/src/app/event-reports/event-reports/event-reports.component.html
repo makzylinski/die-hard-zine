@@ -12,7 +12,10 @@
         </div>
     
         <div class="report-items">
-            <div class="report-item" *ngFor="let event of events">
+            <div 
+                class="report-item"
+                *ngFor="let event of events"
+                (click)="goToEvent(event.id)">
                 <div class="report-item-photo">
                     <img [src]="event.photoUrl" [alt]="event.headline">
                 </div>

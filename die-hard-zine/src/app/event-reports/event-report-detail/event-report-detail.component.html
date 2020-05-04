@@ -1,14 +1,31 @@
 <app-page-content>
-    <div class="detail-section">
-        <div class="detail-header">
-            <h2>{{ currentEventDetail.headline }}</h2>
-            <small>{{ currentEventDetail.author }} | {{ currentEventDetail.date | date }}</small>
+    <div class="report-detail-component">
+        <div class="detail-meta">
+            <div class="detail-author">
+                <p class="author">{{ currentEventDetail.author }}</p>
+                <span class="dot"></span>
+            </div>
+            <div class="detail-date">
+                <p class="date">{{ currentEventDetail.date | date }}</p>
+            </div>
         </div>
+
+        <div class="detail-headline">
+            <div class="detail-header">
+                <h2>{{ currentEventDetail.headline }}</h2>
+            </div>
+            <div class="detail-description">
+                <p>{{ currentEventDetail.hedaline }}</p>
+            </div>
+        </div>
+        
         <div class="detail-photo">
             <img [src]="currentEventDetail.photoUrl" [alt]="currentEventDetail.headline">
         </div>
         <div class="detail-content">
-            {{ currentEventDetail.content }}
+            <p>{{ currentEventDetail.content }}</p>
         </div>
+        <h2 class="author">{{ currentEventDetail.author }}</h2>
     </div>
 </app-page-content>
+<app-footer></app-footer>
