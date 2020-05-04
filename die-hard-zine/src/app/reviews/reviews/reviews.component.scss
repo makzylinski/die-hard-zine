@@ -1,37 +1,30 @@
 @import "../../../sass/variables";
 
+* {
+    box-sizing: border-box;
+}
+
 .reviews-component {
     margin: 50px 20px;
     box-sizing: border-box;
     .reviews-header {
+        width: 100%;
+        height: 75px;
+        background: $black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
         .reviews-header-head {
-            font-size: 24px;
-            display: flex;
-            text-align: center;
-            align-items: center;
-            justify-content: space-between;
-
-            .reviews-header-line {
-                border-top: 2px solid $warmer-grey;
-                width: 30%;
-                align-self: center;
-            }
+            font-size: 48px;
+            color: $white;
+            text-transform: uppercase;
         }
     }
 
     .reviews-items {
         margin: 50px 0;
         position: relative;
-
-        &:after {
-            content: "";
-            background: $pea;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 3px;
-            width: 42px;
-        }
 
         .reviews-item {
             display: flex;
@@ -49,51 +42,54 @@
 
             .reviews-content {
                 width: 100%;
-                height: 50%;
                 background: rgba($color: $black, $alpha: 0.5);
                 overflow-wrap: break-word;
                 position: absolute;
                 bottom: 0;
                 left: 0;
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
+                justify-content: space-between;
+                padding-left: 25px;
 
                 .reviews-content-meta {
-                    width: 80%;
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    text-align: center;
+                    justify-content: space-between;
+                    height: 100%;
 
-                    .reviews-header {
+                    .reviews-content-header {
                         width: 100%;
-                        border-right: 3px solid $pea;
 
                         h2 {
                             color: $white;
-                            padding: 10px;
-                            padding-right: 0;
                             font-size: 24px;
                             margin: 0;
                         }
                     }
 
                     .reviews-description {
-                        width: 100%;
-                        color: $warmer-grey;
+                        p {
+                            color: $warmer-grey;
+                            margin: 5px 0;
+                            text-align: left;
+                        }
+
+                        p:after {
+                            content: '';
+                            display: block;
+                            width: 40%;
+                            height: 3px;
+                            background: $pea;
+                        }
+                        
                     }
                 }
 
                 .reviews-date {
-                    width: 20%;
-                    display: flex;
-                    padding-left: 10px;
-                    
-
                     p {
                         color: $white;
-                        margin: 0;
+                        margin: 5px 0;
                     }
                 }
             }
@@ -101,6 +97,7 @@
     }
 
     .button-container {
+        padding-bottom: 30px;
         .btn-show-more {
             width: 100%;
             height: 34px;

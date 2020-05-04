@@ -1,32 +1,33 @@
-<div class="reviews-component">
-    <div class="reviews-header">
-        <h2 class="reviews-header-head">
-            <span class="reviews-header-line"></span>
-            Recenzje
-            <span class="reviews-header-line"></span>
-        </h2>
-    </div>
+<app-page-content>
+    <div class="reviews-component">
+        <div class="reviews-header">
+            <h2 class="reviews-header-head">Recenzje</h2>
+        </div>
 
-    <div class="reviews-items" *ngFor="let review of reviews">
-        <div class="reviews-item">
-            <div class="reviews-item-photo"></div>
-            <div class="reviews-content">
-                <div class="reviews-content-meta">
-                    <div class="reviews-header">
-                        <h2>{{ review.headline }}</h2>
+        <div class="reviews-items" *ngFor="let review of reviews">
+            <div class="reviews-item">
+                <div class="reviews-item-photo"></div>
+                <div class="reviews-content">
+                    <div class="reviews-content-meta">
+                        <div class="reviews-content-header">
+                            <h2>Hellhammer</h2>
+                        </div>
+                        <div class="reviews-description">
+                            <p>Satanic rites</p>
+                        </div>
                     </div>
-                    <div class="reviews-description">
-                        <p>{{ review.content }}</p>
+                    <div class="reviews-date">
+                        <p>{{ review.date | date }}</p>
                     </div>
-                </div>
-                <div class="reviews-date">
-                    <p>{{ review.date | date }}</p>
                 </div>
             </div>
         </div>
+
+        <div class="button-container">
+            <button type="button" class="btn-show-more">Pokaż więcej</button>
+        </div>
     </div>
 
-    <div class="button-container">
-        <button type="button" class="btn-show-more">Pokaż więcej</button>
-    </div>
-</div>
+</app-page-content>
+
+<app-footer></app-footer>
