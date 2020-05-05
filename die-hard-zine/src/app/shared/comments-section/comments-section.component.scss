@@ -1,0 +1,83 @@
+@import '../../../sass/variables';
+
+.comments-component {
+    .comments-quantity {
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        .comments-header {
+            height: 28px;
+            background: $black;
+            font-size: 20px;
+            color: $white;
+            text-transform: uppercase;
+        }
+
+        .comments-number {
+            font-size: 20px;
+            color: $white;
+            background: $warmer-grey;
+        }
+    }
+
+    .comment-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px 0;
+
+        .comment-form-group {
+            margin: 15px 0;
+            width: 100%;
+
+            input, textarea {
+                width: 100%;
+                border: 1px solid $greyish;
+                border-radius: 5px;
+                padding: 10px;
+                vertical-align: middle;
+            }
+            
+            .form-nickname {
+                height: 35px;
+                
+            }
+        }
+        .submit-form {
+            width: 50%;
+            height: 43px;
+            border-radius: 10px;
+            color: $white;
+            background: $warmer-grey;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+
+    .comments-list {
+        margin: 35px 0;
+        .comment-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5px;
+
+            .comment-name {
+                font-size: 16px;
+                
+            }
+
+            .comment-time {
+                font-size: 11px;
+                color: $warm-grey;
+            }
+
+            .far {
+                padding: 0 5px;
+            }
+        }
+    }
+}

@@ -3,6 +3,9 @@
 .footer-component {
     width: 100%;
     background: $black;
+    position: relative;
+    bottom: 0;
+    left: 0;
 
     .footer-items {
         display: flex;

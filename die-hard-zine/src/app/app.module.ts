@@ -28,6 +28,7 @@ import { PatronageComponent } from './patronage/patronage/patronage.component';
 import { PatronageDetailComponent } from './patronage/patronage-detail/patronage-detail.component';
 import { SliderComponent } from './partials/slider/slider/slider.component';
 import { RecentActivityComponent } from './recent-activity/recent-activity.component';
+import { CommentsSectionComponent } from './shared/comments-section/comments-section.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { RecentActivityComponent } from './recent-activity/recent-activity.compo
     PatronageComponent,
     PatronageDetailComponent,
     SliderComponent,
-    RecentActivityComponent
+    RecentActivityComponent,
+    CommentsSectionComponent
   ],
   imports: [
     BrowserModule,
