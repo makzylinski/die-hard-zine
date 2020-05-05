@@ -1,29 +1,40 @@
-<div class="news-component">
-    <div class="news-header">
-        <h2 class="news-header-head">
-            <span class="news-header-line"></span>
-            Newsy
-            <span class="news-header-line"></span>
-        </h2>
-    </div>
-
-    <div class="news-items" *ngFor="let n of news">
-        <div class="news-item">
-            <div class="news-item-photo"></div>
-            <div class="news-content">
-                <div class="news-content-meta">
-                    <div class="news-header">
-                        <h2>{{ n.headline }}</h2>
+<app-page-content>
+    <div class="news-component">
+        <div class="news-header">
+            <h2 class="news-header-head">
+                Newsy
+            </h2>
+        </div>
+    
+        <div class="news-items">
+            <div
+                class="news-item"
+                *ngFor="let n of news"
+                (click)="goToNews(n.id)">
+                <div class="news-item-photo">
+                    <img [src]="n.photoUrl" [alt]="n.headline">
+                </div>
+                <div class="news-content">
+                    <div class="news-content-meta">
+                        <div class="news-type">
+                            <h2>News</h2>
+                        </div>
+                        <div class="news-date">
+                            <p>{{ n.date | date }} </p>
+                        </div>
                     </div>
-                    <div class="news-description">
-                        <p>{{ n.content }}</p>
+                    <div class="news-content-info">
+                        <p class="news-info">
+                            {{ n.headline }}
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
+    
+        <div class="button-container">
+            <button type="button" class="btn-show-more">Pokaż więcej</button>
+        </div>
     </div>
-
-    <div class="button-container">
-        <button type="button" class="btn-show-more">Pokaż więcej</button>
-    </div>
-</div>
+</app-page-content>
+<app-footer></app-footer>

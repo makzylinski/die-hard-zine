@@ -1,16 +1,45 @@
 <app-page-content>
-    <div class="event-section">
-        <div class="row">
-            <div class="col-sm-12 col-md-3" *ngFor="let event of events" (click)="goToEvent(event.id)">
-                <div class="single-event">
+    <div class="report-component">
+        <div class="report-header">
+            <h2 class="report-header-head">
+                Relacje
+            </h2>
+        </div>
+
+        <div class="concert-type">
+            <h3>Klubowe</h3>
+            <h3>Festiwale</h3>
+        </div>
+    
+        <div class="report-items">
+            <div 
+                class="report-item"
+                *ngFor="let event of events"
+                (click)="goToEvent(event.id)">
+                <div class="report-item-photo">
                     <img [src]="event.photoUrl" [alt]="event.headline">
-                    <div class="event-content">
-                        <h3>{{ event.headline }}</h3>
-                        <p>{{ event.content }}</p>
-                        <small>{{ event.author }}, {{ event.date | date }}</small>
+                </div>
+                <div class="report-content">
+                    <div class="report-content-meta">
+                        <div class="report-type">
+                            <h2>Festiwale</h2>
+                        </div>
+                        <div class="report-date">
+                            <p>{{ event.date | date }} </p>
+                        </div>
+                    </div>
+                    <div class="report-content-info">
+                        <p class="report-info">
+                            {{ event.headline }}
+                        </p>
                     </div>
                 </div>
-            </div>          
+            </div>
+        </div>
+    
+        <div class="button-container">
+            <button type="button" class="btn-show-more">Pokaż więcej</button>
         </div>
     </div>
 </app-page-content>
+<app-footer></app-footer>

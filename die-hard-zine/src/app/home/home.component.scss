@@ -1,7 +1,229 @@
+@import "../../sass/variables";
+
+* {
+    box-sizing: border-box;
+}
+
 .home-component {
+    position: absolute;
+    top: 0;
+    left: 0;
+
     .home-content {
-        position: absolute;
-        top: 0;
-        left: 0;
+        width: 80vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+
+        .recent-section {
+            border-bottom: 2px solid $warm-grey;
+            .recent-header {
+                display: flex;
+                justify-content: center;
+
+                .recent-head {
+                    font-size: 24px;
+                    font-weight: bold;
+                    width: 100%;
+                    text-align: center;
+                    border-bottom: 1px solid $warm-grey;
+                    line-height: 0.1em;
+                    margin: 10px 0 20px;
+
+                    span {
+                        background: $white;
+                        padding: 0 10px;
+                    }
+                }
+            }
+
+            .recent-items {
+                .recent-item {
+                    display: flex;
+
+                    .recent-image {
+                        width: 50%;
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    }
+
+                    .recent-data {
+                        width: 50%;
+                        padding-left: 10px;
+                        .recent-meta {
+                            height: 34px;
+                            display: flex;
+                            justify-content: center;
+
+                            .recent-type {
+                                width: 50%;
+                                background: $black;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+
+                                .recent-type-header {
+                                    color: $white;
+                                    font-weight: bold;
+                                    font-size: 16px;
+                                    margin: 0;
+                                }
+                            }
+
+                            .recent-date {
+                                width: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                .recent-type-date {
+                                    color: $dark-white;
+                                    font-weight: bold;
+                                    font-size: 13px;
+                                    margin: 0;
+                                }
+                            }
+                        }
+
+                        .recent-info {
+                            .recent-info-content {
+                                font-weight: bold;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .news-section {
+            margin-top: 35px;
+            .news-head {
+                font-size: 24px;
+                font-weight: bold;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid $warm-grey;
+                line-height: 0.1em;
+                margin: 10px 0 20px;
+
+                span {
+                    background: $white;
+                    padding: 0 10px;
+                }
+            }
+
+            .news-items {
+                margin: 30px 0;
+                .news-item {
+                    display: flex;
+                    flex-direction: column;
+
+                    .news-picture {
+                        img {
+                            max-width: 100%;
+                            max-height: 100%;
+                        }
+                    }
+
+                    .news-content {
+                        padding: 10px;
+
+                        .news-article-header {
+                            font-weight: bold;
+                        }
+
+                        .news-band-name {
+                            color: $warmer-grey;
+                        }
+
+                        .news-band-name::after {
+                            content: '';
+                            height: 4px;
+                            width: 20%;
+                            margin-top: 10px;
+                            color: $pea;
+                            background: $pea;
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .more-news {
+                width: 60%;
+                height: 34px;
+                margin: 10px auto;
+                display: block;
+                border: 2px solid $black;
+                background: transparent;
+                font-weight: bold;
+            }
+        }
+
+        .reviews-section {
+            margin-top: 35px;
+
+            .reviews-head {
+                font-size: 24px;
+                font-weight: bold;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid $warm-grey;
+                line-height: 0.1em;
+                margin: 10px 0 20px;
+
+                span {
+                    background: $white;
+                    padding: 0 10px;
+                }
+            }
+
+            .reviews-items {
+                margin: 30px 0;
+                .review-item {
+                    display: flex;
+                    flex-direction: column;
+
+                    .review-image {
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .review-content {
+                        background: $dark-white;
+                        border-radius: 0 0 10px 10px;
+                        overflow: hidden;
+                        .review-meta {
+                            display: flex;
+                            justify-content: space-around;
+
+                            h2 {
+                                font-size: 21px;
+                                font-weight: bold;
+                            }
+                        }
+
+                        .review-info {
+                            padding: 10px;
+                            border-bottom: 2px solid $warmer-grey;
+                            
+
+                            p { margin: 0; }
+                        }
+                    }
+                }
+            }
+            .more-news {
+                width: 60%;
+                height: 34px;
+                margin: 10px auto;
+                display: block;
+                border: 2px solid $black;
+                background: transparent;
+                font-weight: bold;
+            }
+        }
     }
 }

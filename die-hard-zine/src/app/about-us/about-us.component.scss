@@ -1,0 +1,70 @@
+@import '../../sass/variables';
+
+* {
+    box-sizing: border-box;
+}
+
+.about-component {
+    margin: 50px 20px; 
+    padding-bottom: 50px;
+
+    .about-header {
+        width: 100%;
+        background: $black;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .about-header-head {
+            font-size: 48px;
+            font-weight: bold;
+            color: $white;
+            text-transform: uppercase;
+        }
+    }
+
+    .about-items {
+        .about-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .about-photo {
+                margin-top: 50px;
+                margin-bottom: 10px;
+                img {
+                    width: 167px;
+                    height: 167px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                }
+            }
+
+            .about-info {
+                text-align: center;
+                .about-name {
+                    font-size: 22px;
+                }
+
+                .about-role {
+                    font-size: 17px;
+                    color: $warm-grey;
+                }
+
+                h4:after {
+                    content: '';
+                    display: block;
+                    margin-top: 20px;
+                    width: 100%;
+                    height: 3px;
+                    background: $pea;
+                }
+
+                .about-personal-info {
+                    color: $greyish;
+                }
+            }
+        }
+    }
+}

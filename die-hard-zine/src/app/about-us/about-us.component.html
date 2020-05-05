@@ -1,1 +1,21 @@
-<p>about-us works!</p>
+<app-page-content>
+    <div class="about-component">
+        <div class="about-header">
+            <h2 class="about-header-head">O nas</h2>
+        </div>
+
+        <div class="about-items" *ngFor="let person of test">
+            <div class="about-item">
+                <div class="about-photo">
+                    <img [src]="person.photo" [alt]="person.name">
+                </div>
+                <div class="about-info">
+                    <h3 class="about-name">{{ person.name }}</h3>
+                    <h4 class="about-role">{{ person.role }}</h4>
+                    <p class="about-personal-info">{{ person.info }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-page-content>
+<app-footer></app-footer>

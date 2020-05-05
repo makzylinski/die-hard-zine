@@ -1,14 +1,3 @@
-<app-page-content>
-    <div class="detail-section">
-        <div class="detail-header">
-            <h2>{{ currentReviewDetail.headline }}</h2>
-            <small>{{ currentReviewDetail.author }} | {{ currentReviewDetail.date | date }}</small>
-        </div>
-        <div class="detail-photo">
-            <img [src]="currentReviewDetail.photoUrl" [alt]="currentReviewDetail.headline">
-        </div>
-        <div class="detail-content">
-            {{ currentReviewDetail.content }}
-        </div>
-    </div>
-</app-page-content>
+<app-page-detail
+[detail]="currentReviewDetail">
+</app-page-detail>
