@@ -7,7 +7,10 @@
         </div>
     
         <div class="interview-items">
-            <div class="interview-item" *ngFor="let interview of interviews">
+            <div
+                class="interview-item"
+                *ngFor="let interview of interviews"
+                (click)="goToInterview(interview.id)">
                 <div class="interview-item-photo">
                     <img [src]="interview.photoUrl" [alt]="interview.headline">
                 </div>

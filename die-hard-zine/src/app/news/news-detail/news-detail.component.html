@@ -1,14 +1,3 @@
-<app-page-content>
-    <div class="detail-section">
-        <div class="detail-header">
-            <h2>{{ currentNewsDetail.headline }}</h2>
-            <small>{{ currentNewsDetail.author }} | {{ currentNewsDetail.date | date }}</small>
-        </div>
-        <div class="detail-photo">
-            <img [src]="currentNewsDetail.photoUrl" [alt]="currentNewsDetail.headline">
-        </div>
-        <div class="detail-content">
-            {{ currentNewsDetail.content }}
-        </div>
-    </div>
-</app-page-content>
+<app-page-detail
+[detail]="currentNewsDetail">
+</app-page-detail>

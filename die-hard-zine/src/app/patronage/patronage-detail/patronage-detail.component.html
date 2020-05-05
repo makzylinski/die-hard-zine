@@ -1,14 +1,3 @@
-<app-page-content>
-    <div class="detail-section">
-        <div class="detail-header">
-            <h2>{{ currentPatronageDetail.headline }}</h2>
-            <small>{{ currentPatronageDetail.author }} | {{ currentPatronageDetail.date | date }}</small>
-        </div>
-        <div class="detail-photo">
-            <img [src]="currentPatronageDetail.photoUrl" [alt]="currentPatronageDetail.headline">
-        </div>
-        <div class="detail-content">
-            {{ currentPatronageDetail.content }}
-        </div>
-    </div>
-</app-page-content>
+<app-page-detail
+[detail]="currentPatronageDetail">
+</app-page-detail>

@@ -12,7 +12,7 @@ export class InterviewService {
             new Date(2020, 10, 4),
             'Max Rabid',
             'Martyrdod - wywiad',
-            'content tuatj jakis ajdasdasdasdkasdjaksdjaskdjaksdjaksdjkasjda',
+            'content tuatj jakis ',
             'https://i.ytimg.com/vi/0oq0NWA2gCg/maxresdefault.jpg'
         )
     ];

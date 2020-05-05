@@ -4,7 +4,10 @@
             <h2 class="reviews-header-head">Recenzje</h2>
         </div>
 
-        <div class="reviews-items" *ngFor="let review of reviews">
+        <div
+            class="reviews-items"
+            *ngFor="let review of reviews"
+            (click)="goToReview(review.id)">
             <div class="reviews-item">
                 <div class="reviews-item-photo"></div>
                 <div class="reviews-content">

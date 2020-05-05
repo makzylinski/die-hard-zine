@@ -29,6 +29,7 @@ import { PatronageDetailComponent } from './patronage/patronage-detail/patronage
 import { SliderComponent } from './partials/slider/slider/slider.component';
 import { RecentActivityComponent } from './recent-activity/recent-activity.component';
 import { CommentsSectionComponent } from './shared/comments-section/comments-section.component';
+import { PageDetailComponent } from './shared/page-detail/page-detail.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { CommentsSectionComponent } from './shared/comments-section/comments-sec
     PatronageDetailComponent,
     SliderComponent,
     RecentActivityComponent,
-    CommentsSectionComponent
+    CommentsSectionComponent,
+    PageDetailComponent
   ],
   imports: [
     BrowserModule,
