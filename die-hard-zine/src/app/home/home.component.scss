@@ -16,7 +16,7 @@
         margin-top: 30px;
 
         .recent-section {
-            border-bottom: 2px solid $warm-grey;
+            border-bottom: 1px solid $warm-grey;
             .recent-header {
                 display: flex;
                 justify-content: center;
@@ -120,6 +120,7 @@
                     flex-direction: column;
 
                     .news-picture {
+                        margin: 0 auto;
                         img {
                             max-width: 100%;
                             max-height: 100%;
@@ -138,7 +139,7 @@
                         }
 
                         .news-band-name::after {
-                            content: '';
+                            content: "";
                             height: 4px;
                             width: 20%;
                             margin-top: 10px;
@@ -208,9 +209,10 @@
                         .review-info {
                             padding: 10px;
                             border-bottom: 2px solid $warmer-grey;
-                            
 
-                            p { margin: 0; }
+                            p {
+                                margin: 0;
+                            }
                         }
                     }
                 }
@@ -224,6 +226,79 @@
                 background: transparent;
                 font-weight: bold;
             }
+        }
+
+        @media (min-width: 768px) {
+            .recent-section {
+                border-bottom: none;
+
+                .recent-item {
+                    margin: 25px 0;
+                }
+            }
+
+            .news-item {
+                margin: 25px 0;
+            }
+
+            .review-item {
+                margin: 25px 0;
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .recent-head {
+                span {
+                    font-size: 54px;
+                }
+            }
+
+            .recent-info {
+                .recent-info-content {
+                    padding: 15px 0;
+                    font-size: 26px !important;
+                }
+            }
+
+            .news-head {
+                span {
+                    font-size: 54px;
+                }
+            }
+
+            .news-content {
+                padding: 10px;
+
+                .news-article-header {
+                    font-weight: bold;
+                }
+
+                .news-article-header {
+                    font-size: 36px;
+                }
+
+                .news-band-name {
+                    font-size: 28px;
+                }
+            }
+
+            .reviews-section {
+                .reviews-head {
+                    margin: 50px 0;
+                    span {
+                        font-size: 54px;
+                    }
+                }
+                .reviews-items {
+    
+                    .reviews-item {
+                        width: 20%;
+                    }
+                }
+            }
+
+            
+            
         }
     }
 }

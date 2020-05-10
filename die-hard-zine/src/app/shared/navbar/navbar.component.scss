@@ -1,4 +1,4 @@
-@import '../../../sass/variables';
+@import "../../../sass/variables";
 
 .backdrop {
     position: fixed;
@@ -35,16 +35,23 @@
                 text-decoration: none;
                 list-style: none;
 
+                a {
+                    color: $white;
+                }
+
                 span {
                     margin: 8px;
                 }
+            }
+
+            .item-desktop {
+                display: none;
             }
 
             .hamburger {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-end;
-                
 
                 span {
                     background: $white;
@@ -78,7 +85,6 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-
         }
 
         .ham-nav__item {
@@ -88,5 +94,17 @@
                 text-decoration: none;
             }
         }
+    }
+
+    
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none !important;
+    }
+
+    .item-desktop {
+        display: inline-block !important;
     }
 }
