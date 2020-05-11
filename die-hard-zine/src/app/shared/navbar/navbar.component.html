@@ -16,10 +16,12 @@
         <a routerLink="" class="logo">Die Hard Magazine</a>
       </li>
 
-      <li class="navbar__item item-desktop" *ngFor="let subpage of subpages">
-        <a [routerLink]="subpage.path" class="logo">{{ subpage.name }}</a>
-      </li>
-
+      <div class="items-desktop">
+        <li class="navbar__item item-desktop" *ngFor="let subpage of subpages">
+          <a [routerLink]="subpage.path" class="logo">{{ subpage.name }}</a>
+        </li>
+      </div>
+      
       <li class="navbar__item">
         <div class="socials">
           <div class="fa">

@@ -1,9 +1,10 @@
 @import "../../../../sass/variables";
 
 .slider-component {
+    width: 100%;
     .slider {
         position: relative;
-        width: 100vw;
+        
         overflow-x: hidden;
         height: 45vh;
         background-image: url("../../../../assets/pics/f4acd177-3281-43e1-9dc1-4eaa046ffb7a.png");
