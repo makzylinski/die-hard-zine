@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -30,6 +32,7 @@ import { SliderComponent } from './partials/slider/slider/slider.component';
 import { RecentActivityComponent } from './recent-activity/recent-activity.component';
 import { CommentsSectionComponent } from './shared/comments-section/comments-section.component';
 import { PageDetailComponent } from './shared/page-detail/page-detail.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
@@ -62,7 +65,10 @@ import { PageDetailComponent } from './shared/page-detail/page-detail.component'
     BrowserModule,
     AdminModule,
     AppRoutingModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
