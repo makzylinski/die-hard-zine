@@ -1,9 +1,9 @@
 @import "../../../../sass/variables";
 
 .slider-component {
+    width: 100%;
     .slider {
         position: relative;
-        width: 100vw;
         overflow-x: hidden;
         height: 45vh;
         background-image: url("../../../../assets/pics/f4acd177-3281-43e1-9dc1-4eaa046ffb7a.png");
@@ -22,6 +22,8 @@
             .slider-dots {
                 display: flex;
                 align-items: center;
+                justify-content: center;
+                width: 100%;
 
                 .slider-dots-container {
                     display: flex;
@@ -45,6 +47,9 @@
     }
 
     @media (min-width: 768px) {
+        .slider {
+            height: 60vh;
+        }
         .slider-meta {
             position: absolute;
             bottom: 10%;
@@ -54,13 +59,18 @@
             }
 
             .slider-dots-container {
-                width: 100px !important;
+                width: 15% !important;
+                max-width: 180px !important;
 
                 .dot {
-                    width: 15px !important;
-                    height: 15px !important;
+                    width: 0.8rem !important;
+                    height: 0.8rem !important;
                 }
             }
         }
+    }
+
+    @media (min-width: 1366px) {
+        
     }
 }

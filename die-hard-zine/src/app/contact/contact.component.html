@@ -11,11 +11,12 @@
                     <h4 class="contact-email">diehardzine@gmail.com</h4>
                 </div>
                 <div class="contact-form-wrapper">
-                    <form class="contact-form">
+                    <form [formGroup]="contactForm" class="contact-form">
                         <div class="contact-form-group">
                             <label for="name">Imię i nazwisko *</label>
                             <input
                             type="text"
+                            formControlName="name"
                             id="name"
                             name="name"
                             class="contact-form-group">
@@ -26,6 +27,7 @@
                             <label for="email">Adres email *</label>
                             <input
                                 type="email"
+                                formControlName="email"
                                 id="email"
                                 name="email"
                                 class="contact-form-group">
@@ -35,12 +37,25 @@
                             <label for="message">Wiadomość *</label>
                             <textarea
                                 name="message"
+                                formControlName="message"
                                 id="message"
                                 rows="10"></textarea>
                         </div>
                         
                         <div class="button-wrapper">
-                            <button class="form-button" type="button">Wyślij</button>
+                            <button
+                                class="form-button"
+                                type="button"
+                                (click)="onSubmit()"
+                                >
+                                Wyślij</button>
+
+                                <button
+                                class="form-button"
+                                type="button"
+                                (click)="onFetch()"
+                                >
+                                Fecz</button>
                         </div>
                         
                     </form>

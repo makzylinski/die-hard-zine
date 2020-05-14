@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +9,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  contactForm: FormGroup;
+
+  constructor(private http: HttpClient) {}
 
   ngOnInit() {
+    this.contactForm = new FormGroup({
+      name: new FormControl(null),
+      email: new FormControl(null),
+      message: new FormControl(null)
+    })
+  }
+
+  onSubmit() {
+    console.log(this.contactForm.value);
+
+    this.http.post('http://localhost:3000/api/news', this.contactForm.getRawValue())
+    .subscribe(resp => {
+      console.log(resp);
+    })
+  }
+
+  onFetch() {
+    this.http.get('http://localhost:3000/api/news')
+    .subscribe(resp => {
+      console.log(resp);
+    })
   }
 
 }

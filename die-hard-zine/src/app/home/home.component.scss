@@ -8,6 +8,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
 
     .home-content {
         width: 80vw;
@@ -244,41 +245,64 @@
             .review-item {
                 margin: 25px 0;
             }
+
+            .news-items {
+                width: 100%;
+                .news-item {
+                    width: 50%;
+                }
+            }
+
+            .reviews-items {
+                width: 100%;
+                .review-item {
+                    width: 50%;
+                }
+            }
         }
 
-        @media (min-width: 1280px) {
-            .recent-head {
-                span {
-                    font-size: 54px;
+        @media (min-width: 1366px) {
+            .recent-section {
+                margin: 4rem 0;
+
+                .recent-header {
+                    margin: 3rem 0;
+                    .recent-head {
+                        span {
+                            font-size: 2.3rem;
+                        }
+                    }    
+                }
+                
+                .recent-info {
+                    .recent-info-content {
+                        padding: 15px 0;
+                        font-size: 26px !important;
+                    }
                 }
             }
 
-            .recent-info {
-                .recent-info-content {
-                    padding: 15px 0;
-                    font-size: 26px !important;
+            .news-section {
+                margin: 4rem 0;
+                .news-head {
+                    margin: 3rem 0;
+                    font-size: 2.3rem;
                 }
-            }
-
-            .news-head {
-                span {
-                    font-size: 54px;
-                }
-            }
-
-            .news-content {
-                padding: 10px;
-
-                .news-article-header {
-                    font-weight: bold;
-                }
-
-                .news-article-header {
-                    font-size: 36px;
-                }
-
-                .news-band-name {
-                    font-size: 28px;
+    
+                .news-content {
+                    padding: 10px;
+    
+                    .news-article-header {
+                        font-weight: bold;
+                    }
+    
+                    .news-article-header {
+                        font-size: 36px;
+                    }
+    
+                    .news-band-name {
+                        font-size: 28px;
+                    }
                 }
             }
 
@@ -297,7 +321,19 @@
                 }
             }
 
-            
+            .news-items {
+                width: 100%;
+                .news-item {
+                    width: 25%;
+                }
+            }
+
+            .reviews-items {
+                width: 100%;
+                .review-item {
+                    width: 25%;
+                }
+            }
             
         }
     }

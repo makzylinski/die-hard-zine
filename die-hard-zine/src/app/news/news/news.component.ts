@@ -17,6 +17,7 @@ export class NewsComponent implements OnInit {
   ngOnInit() {
     this.news = this.newsService.getNewsArray();
     console.log(this.newsService.getNewsArray());
+    this.newsService.getTest();
   }
 
   goToNews(id: number) {

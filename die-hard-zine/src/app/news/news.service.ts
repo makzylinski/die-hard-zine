@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
+
 import { News } from './news.model';
-import { Subject } from 'rxjs';
+import { Subject, from } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({providedIn: 'root'})
 export class NewsService {
@@ -56,7 +58,13 @@ export class NewsService {
 
     singleNews: Subject<News>;
 
-    constructor() {}
+    constructor(private http: HttpClient) {}
+
+    getTest() {
+        this.http.get('http://localhost:3000/api/posts').subscribe((data) => {
+            console.log(data);
+        });
+    }
 
     getNewsArray() {
         return this.news.slice();
