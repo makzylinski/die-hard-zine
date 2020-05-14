@@ -24,14 +24,14 @@ export class ContactComponent implements OnInit {
   onSubmit() {
     console.log(this.contactForm.value);
 
-    this.http.post('http://localhost:3000/api/posts', this.contactForm.getRawValue())
+    this.http.post('http://localhost:3000/api/news', this.contactForm.getRawValue())
     .subscribe(resp => {
       console.log(resp);
     })
   }
 
   onFetch() {
-    this.http.get('http://localhost:3000/api/posts')
+    this.http.get('http://localhost:3000/api/news')
     .subscribe(resp => {
       console.log(resp);
     })
