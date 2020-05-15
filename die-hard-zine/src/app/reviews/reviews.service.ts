@@ -10,7 +10,7 @@ export class ReviewsService {
             new Date(2020, 6, 6),
             'Dark Sobala',
             'Recenzja 1. - Malina Road1',
-            'asdasdasdasdasdacontentasdasdasdasdasd',
+            'asdasdasdasdasdac ontenta sdasdasdas dasd sdasdasdas sdasdasdas sdasdasdas sdasdasdas sdasdasdas',
             'https://i.ytimg.com/vi/BJGDmGZjXxk/hqdefault.jpg'
         ),
         new Review(
@@ -30,6 +30,10 @@ export class ReviewsService {
             'https://i.ytimg.com/vi/BJGDmGZjXxk/hqdefault.jpg'
         )
     ];
+
+    getAllReviews() {
+        return this.reviews.slice();
+    }
 
     deleteReview(id: number) {
         this.reviews.splice(id, 1);

@@ -14,33 +14,31 @@
         width: 80vw;
         margin-left: auto;
         margin-right: auto;
-        margin-top: 30px;
+        margin-top: 2rem;
 
         .recent-section {
             border-bottom: 1px solid $warm-grey;
             .recent-header {
                 display: flex;
                 justify-content: center;
+                align-items: center;
+                background: $black;
+                margin-bottom: 2rem;
+                height: 3.5rem;
 
                 .recent-head {
-                    font-size: 24px;
+                    font-size: 1.2rem;
                     font-weight: bold;
-                    width: 100%;
-                    text-align: center;
-                    border-bottom: 1px solid $warm-grey;
-                    line-height: 0.1em;
-                    margin: 10px 0 20px;
-
-                    span {
-                        background: $white;
-                        padding: 0 10px;
-                    }
+                    margin: 0.8rem 0 1.2rem;
+                    color: $white;
+                    text-transform: uppercase;
                 }
             }
 
             .recent-items {
                 .recent-item {
                     display: flex;
+                    margin: 1.9rem 0;
 
                     .recent-image {
                         width: 50%;
@@ -52,9 +50,9 @@
 
                     .recent-data {
                         width: 50%;
-                        padding-left: 10px;
+                        padding-left: 0.9rem;
                         .recent-meta {
-                            height: 34px;
+                            height: 2rem;
                             display: flex;
                             justify-content: center;
 
@@ -68,7 +66,7 @@
                                 .recent-type-header {
                                     color: $white;
                                     font-weight: bold;
-                                    font-size: 16px;
+                                    font-size: 1rem;
                                     margin: 0;
                                 }
                             }
@@ -81,7 +79,7 @@
                                 .recent-type-date {
                                     color: $dark-white;
                                     font-weight: bold;
-                                    font-size: 13px;
+                                    font-size: 0.9rem;
                                     margin: 0;
                                 }
                             }
@@ -90,7 +88,7 @@
                         .recent-info {
                             .recent-info-content {
                                 font-weight: bold;
-                                font-size: 14px;
+                                font-size: 0.9rem;
                             }
                         }
                     }
@@ -98,25 +96,29 @@
             }
         }
         .news-section {
-            margin-top: 35px;
-            .news-head {
-                font-size: 24px;
-                font-weight: bold;
-                width: 100%;
-                text-align: center;
-                border-bottom: 1px solid $warm-grey;
-                line-height: 0.1em;
-                margin: 10px 0 20px;
+            margin-top: 2rem;
 
-                span {
-                    background: $white;
-                    padding: 0 10px;
+            .news-header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: $black;
+                margin-bottom: 2rem;
+                height: 3rem;
+
+                .news-head {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    margin: 0.8rem 0 1.2rem;
+                    color: $white;
+                    text-transform: uppercase;
                 }
             }
 
             .news-items {
-                margin: 30px 0;
+                
                 .news-item {
+                    margin: 1.9rem 0;
                     display: flex;
                     flex-direction: column;
 
@@ -129,21 +131,22 @@
                     }
 
                     .news-content {
-                        padding: 10px;
+                        padding: 0.8rem 0.2rem;
 
                         .news-article-header {
                             font-weight: bold;
                         }
 
-                        .news-band-name {
+                        .news-single-content {
                             color: $warmer-grey;
+                            overflow: hidden;
                         }
 
-                        .news-band-name::after {
+                        .news-single-content::after {
                             content: "";
-                            height: 4px;
-                            width: 20%;
-                            margin-top: 10px;
+                            height: 0.3rem;
+                            width: 25%;
+                            margin-top: 0.8rem;
                             color: $pea;
                             background: $pea;
                             display: block;
@@ -154,7 +157,7 @@
 
             .more-news {
                 width: 60%;
-                height: 34px;
+                height: 2rem;
                 margin: 10px auto;
                 display: block;
                 border: 2px solid $black;
@@ -164,26 +167,30 @@
         }
 
         .reviews-section {
-            margin-top: 35px;
+            margin-top: 2rem;
 
-            .reviews-head {
-                font-size: 24px;
-                font-weight: bold;
-                width: 100%;
-                text-align: center;
-                border-bottom: 1px solid $warm-grey;
-                line-height: 0.1em;
-                margin: 10px 0 20px;
+            .reviews-header {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: $black;
+                margin-bottom: 2rem;
+                height: 3rem;
 
-                span {
-                    background: $white;
-                    padding: 0 10px;
+                .reviews-head {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    margin: 0.8rem 0 1.2rem;
+                    color: $white;
+                    text-transform: uppercase;
                 }
             }
+            
 
             .reviews-items {
-                margin: 30px 0;
+                
                 .review-item {
+                    margin: 1.9rem 0;
                     display: flex;
                     flex-direction: column;
 
@@ -199,16 +206,26 @@
                         overflow: hidden;
                         .review-meta {
                             display: flex;
-                            justify-content: space-around;
+                            justify-content: space-evenly;
+                            padding: 10px;
+                            padding-bottom: 0;
 
                             h2 {
-                                font-size: 21px;
+                                font-size: 1.3rem;
                                 font-weight: bold;
+                            }
+
+                            .review-date {
+                                font-size: 1rem;
                             }
                         }
 
                         .review-info {
+                            display: flex;
+                            justify-content: space-evenly;
+                            overflow-wrap: break-word;
                             padding: 10px;
+                            padding-top: 0;
                             border-bottom: 2px solid $warmer-grey;
 
                             p {
@@ -220,7 +237,7 @@
             }
             .more-news {
                 width: 60%;
-                height: 34px;
+                height: 2rem;
                 margin: 10px auto;
                 display: block;
                 border: 2px solid $black;
@@ -300,7 +317,7 @@
                         font-size: 36px;
                     }
     
-                    .news-band-name {
+                    .news-single-content {
                         font-size: 28px;
                     }
                 }
