@@ -250,13 +250,10 @@
             .recent-section {
                 border-bottom: none;
 
-                .recent-item {
-                    margin: 25px 0;
+                .recent-info {
+                    padding: 10px 0;
+                    p { font-size: 1.5rem !important; }
                 }
-            }
-
-            .news-item {
-                margin: 25px 0;
             }
 
             .review-item {
@@ -265,15 +262,21 @@
 
             .news-items {
                 width: 100%;
+                display: flex;
+                flex-wrap: wrap;
                 .news-item {
-                    width: 50%;
+                    width: 40%;
+                    margin: 1.9rem 5% !important;
                 }
             }
 
             .reviews-items {
                 width: 100%;
+                display: flex;
+                flex-wrap: wrap;
                 .review-item {
-                    width: 50%;
+                    width: 40%;
+                    margin: 1.9rem 5% !important;
                 }
             }
         }

@@ -24,4 +24,8 @@ export class NavbarComponent {
     this.hamVisible = !this.hamVisible;
   }
 
+  goToFb() {
+
+  }
+
 }
