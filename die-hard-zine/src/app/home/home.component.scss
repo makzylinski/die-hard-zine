@@ -92,6 +92,11 @@
                             }
                         }
                     }
+
+                    &:hover {
+                        background: $greyish;
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -124,6 +129,7 @@
 
                     .news-picture {
                         margin: 0 auto;
+                        width: 100%;
                         img {
                             max-width: 100%;
                             max-height: 100%;
@@ -151,6 +157,11 @@
                             background: $pea;
                             display: block;
                         }
+                    }
+
+                    &:hover {
+                        background: $greyish;
+                        cursor: pointer;
                     }
                 }
             }
@@ -233,6 +244,11 @@
                             }
                         }
                     }
+
+                    &:hover {
+                        background: $greyish;
+                        cursor: pointer;
+                    }
                 }
             }
             .more-news {
@@ -267,6 +283,14 @@
                 .news-item {
                     width: 40%;
                     margin: 1.9rem 5% !important;
+                    
+                    .news-article-header {
+                        font-size: 1.6rem;
+                    }
+
+                    .news-single-content {
+                        font-size: 1.4rem;
+                    }
                 }
             }
 
@@ -277,83 +301,45 @@
                 .review-item {
                     width: 40%;
                     margin: 1.9rem 5% !important;
+
+                    .review-header {
+                        font-size: 1.6rem;
+                        line-height: 2.1rem;
+                    } 
+
+                    .review-info {
+                        font-size: 1.4rem;
+                    }
                 }
             }
         }
 
         @media (min-width: 1366px) {
-            .recent-section {
-                margin: 4rem 0;
 
-                .recent-header {
-                    margin: 3rem 0;
-                    .recent-head {
-                        span {
-                            font-size: 2.3rem;
-                        }
-                    }    
-                }
-                
-                .recent-info {
-                    .recent-info-content {
-                        padding: 15px 0;
-                        font-size: 26px !important;
-                    }
-                }
-            }
-
-            .news-section {
-                margin: 4rem 0;
-                .news-head {
-                    margin: 3rem 0;
-                    font-size: 2.3rem;
-                }
-    
-                .news-content {
-                    padding: 10px;
-    
-                    .news-article-header {
-                        font-weight: bold;
-                    }
-    
-                    .news-article-header {
-                        font-size: 36px;
-                    }
-    
-                    .news-single-content {
-                        font-size: 28px;
-                    }
-                }
-            }
-
+            .recent-section,
+            .news-section,
             .reviews-section {
-                .reviews-head {
-                    margin: 50px 0;
-                    span {
-                        font-size: 54px;
-                    }
-                }
-                .reviews-items {
-    
-                    .reviews-item {
-                        width: 20%;
-                    }
-                }
+                margin: 8rem 0;
             }
 
-            .news-items {
-                width: 100%;
-                .news-item {
-                    width: 25%;
-                }
+            .recent-header,
+            .news-header,
+            .reviews-header {
+                margin: 5rem 0 !important;
             }
 
-            .reviews-items {
-                width: 100%;
-                .review-item {
-                    width: 25%;
-                }
+            .news-item {
+                width: 23% !important;
             }
+
+            .more-news {
+                height: 4rem !important;
+                font-size: 1.8rem;
+            }
+            
+        }
+
+        @media (min-width: 1680px) {
             
         }
     }
