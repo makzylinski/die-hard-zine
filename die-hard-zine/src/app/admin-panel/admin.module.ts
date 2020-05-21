@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { PageContentComponent } from './shared/page-content/page-content.component';
 import { NewArticleComponent } from './new-article/new-article.component';
 import { HomeComponent } from './home/home.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
 
 @NgModule({
     declarations: [
@@ -33,7 +34,8 @@ import { HomeComponent } from './home/home.component';
         ModalComponent,
         PageContentComponent,
         NewArticleComponent,
-        HomeComponent
+        HomeComponent,
+        NavbarComponent
     ],
     imports: [
         RouterModule,

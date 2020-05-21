@@ -15,7 +15,6 @@ export class AppComponent {
   constructor(private router: Router) {}
 
   checkRouteName() {
-    console.log(this.router.url);
-    this.currRoute = this.router.url;
+    this.router.url.includes('admin') ? this.currRoute = false : this.currRoute = true;
   }
 }

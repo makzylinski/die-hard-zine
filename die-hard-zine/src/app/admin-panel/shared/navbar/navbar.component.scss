@@ -1,0 +1,48 @@
+@import '../../../../sass/variables';
+
+.navbar-container {
+    width: 100vw;
+    color: $white;
+    background: $black;
+    height: 70px;
+    position: fixed;
+    z-index: 1;
+
+    .navbar-items {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .logo {
+            margin-right: auto;
+            padding: 0 15px;
+        }
+
+        .navbar-item {
+            padding: 5px 15px;
+            color: $white;
+            font-size: 0.9rem;
+
+            img {
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+            }
+
+            .username {
+                font-weight: bold;
+                padding: 0 10px;
+            }
+
+            .fa {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+
+    }
+}
