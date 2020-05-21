@@ -22,4 +22,9 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
   }
 
+  onRedirect(route) {
+    console.log(route);
+    this.router.navigate(['/__admin-home', route]);
+  }
+
 }

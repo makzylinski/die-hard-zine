@@ -3,11 +3,8 @@
         <ul class="list-group" *ngFor="let page of pages">
             <li 
                 class="list-group-item"
-                [routerLink]="['/__admin', page.route]">
+                (click)="onRedirect(page.route)">
                 <span>{{ page.name }}</span>
-                <span class="material-icons">
-                    keyboard_arrow_down
-                </span>
             </li>
         </ul>
     </div>
