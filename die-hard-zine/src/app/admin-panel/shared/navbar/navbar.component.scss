@@ -7,6 +7,7 @@
     height: 70px;
     position: fixed;
     z-index: 1;
+    top: 0;
 
     .navbar-items {
         height: 100%;
@@ -15,10 +16,24 @@
         justify-content: flex-end;
         align-items: center;
 
-        .logo {
+        .hamburger {
             margin-right: auto;
-            padding: 0 15px;
-            display: none;
+            margin-left: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            span {
+                background: $white;
+                width: 17px;
+                height: 2px;
+                margin: 2px;
+            }
+
+            .ham-nav-short {
+                width: 14px;
+                height: 2px;
+            }
         }
 
         .navbar-item {

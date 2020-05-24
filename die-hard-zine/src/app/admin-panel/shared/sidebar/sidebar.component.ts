@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -6,25 +6,25 @@ import { Router, ActivatedRoute } from '@angular/router';
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
-export class SidebarComponent implements OnInit {
+export class SidebarComponent {
 
   pages: {name: string, route: string}[] = [
-    { name: 'Interviews', route: 'interviews' },
-    { name: 'Event Reports', route: 'event-reports'},
+    { name: 'Strona główna', route: '__admin-home' },
+    { name: 'Wywiady', route: 'interviews' },
+    { name: 'Relacje', route: 'event-reports'},
     { name: 'News', route: 'news'},
-    { name: 'Reviews', route: 'reviews'},
-    { name: 'Patronage', route: 'patronage'},
-    { name: 'Add new article', route: 'new'}
+    { name: 'Recenzje', route: 'reviews'},
+    { name: 'Patronaty', route: 'patronage'},
+    { name: 'Dodaj nowy artykuł', route: 'new'}
   ];
 
   constructor(private router: Router, private route: ActivatedRoute) { }
 
-  ngOnInit() {
-  }
+  @Output() toggleNav = new EventEmitter<boolean>();
 
   onRedirect(route) {
-    console.log(route);
     this.router.navigate(['/__admin-home', route]);
+    this.toggleNav.emit(false);
   }
 
 }

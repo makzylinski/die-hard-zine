@@ -1,8 +1,12 @@
 <div class="navbar-container">
     <div class="navbar-items">
 
-        <div class="logo">
-            logo here
+        <div
+            class="hamburger"
+            (click)="hamNavToggle = !hamNavToggle">
+            <span></span>
+            <span class="ham-nav-short"></span>
+            <span></span>
         </div>
 
         <div class="navbar-item">
@@ -18,4 +22,9 @@
             <i class="fa fa-chevron-circle-down"></i>
         </div>
     </div>
+</div>
+<div class="sidebar">
+    <app-sidebar
+        *ngIf="hamNavToggle"
+        (toggleNav)="toggleHam($event)"></app-sidebar>
 </div>

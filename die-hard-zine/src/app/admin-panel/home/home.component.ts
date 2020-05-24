@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  hamNav = false;
   constructor() { }
 
   ngOnInit() {
+  }
+
+  testuj(event) {
+    this.hamNav = event;
   }
 
 }
