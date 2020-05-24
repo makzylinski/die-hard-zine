@@ -9,7 +9,6 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class SidebarComponent {
 
   pages: {name: string, route: string}[] = [
-    { name: 'Strona główna', route: '__admin-home' },
     { name: 'Wywiady', route: 'interviews' },
     { name: 'Relacje', route: 'event-reports'},
     { name: 'News', route: 'news'},

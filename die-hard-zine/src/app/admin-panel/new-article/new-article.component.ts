@@ -31,7 +31,7 @@ export class NewArticleComponent implements OnInit {
       author: this.newForm.value.author,
       headline: this.newForm.value.headline,
       content: this.newForm.value.content,
-      photoUrl: this.newForm.value.photoUrl
+      photoUrl: this.newForm.value.photo
     };
     this.adminService.addNewArticle(articleType, newArticle);
 

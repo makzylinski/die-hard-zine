@@ -83,6 +83,8 @@ export class NewsService {
     }
 
     addNewNews(news: News) {
+        console.log(news);
         this.news.push(news);
+        console.log(this.news);
     }
 }

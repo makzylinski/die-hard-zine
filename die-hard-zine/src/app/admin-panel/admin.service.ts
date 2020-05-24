@@ -94,6 +94,7 @@ export class AdminService {
                 return this.eventReportsService.addNewEventReport(newEventReport);
 
             case 'news':
+                console.log('elo z news serwusiu')
                 const newNews = new News(
                 this.newsService.news.length,
                 new Date(),
