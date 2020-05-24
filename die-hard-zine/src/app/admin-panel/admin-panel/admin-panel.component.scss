@@ -1,0 +1,63 @@
+@import './../../../sass/variables';
+
+.admin-container {
+    height: 100vh;
+    background: $black;
+    
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+
+        .login-header {
+            font-size: 1.5rem;
+            color: $greyish;
+            letter-spacing: 0.6px;
+            font-weight: bold;
+            padding: 15px;
+            margin-bottom: 45px;
+        }
+
+        .login-form {
+            width: 70%;
+            max-width: 350px;
+            margin: 0 auto;
+            
+            .form-group input {
+                width: 100%;
+                margin: 0.4rem 0;
+                border-radius: 10px;
+                border: none;
+                padding: 3px 15px;
+                
+                &::placeholder {
+                    color: $dark-white;
+                } 
+            }
+
+            .btn-login {
+                width: 100%;
+                margin: 0.4rem 0;
+                border-radius: 10px;
+                border: none;
+                padding: 3px;
+                background: $white;
+                font-weight: bold;
+            }
+
+            .login-problem {
+                color: $greyish;
+                text-align: center;
+                margin: 1rem 0;
+            }
+        }
+    }
+    @media (min-width: 768px) {
+        .login-header {
+            font-size: 2.5rem !important;
+        }
+    }
+}

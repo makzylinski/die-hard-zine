@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { InterviewService } from 'src/app/interview/interview.service';
+import { InterviewService } from 'src/app/client/interview/interview.service';
 import { ActivatedRoute } from '@angular/router';
-import { Interview } from 'src/app/interview/interview.model';
+import { Interview } from 'src/app/client/interview/interview.model';
 
 @Component({
   selector: 'app-interviews-edit',

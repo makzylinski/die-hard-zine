@@ -1,4 +1,6 @@
 .articles-container {
+    position: relative;
+    top: 70px;
     .articles-body {
         margin: 10px;
 
@@ -6,15 +8,16 @@
             margin: 10px 0;
             
             .list-group-item {
+                display: flex;
+
+                .actions {
+                    margin-left: auto;
+                    cursor: pointer;
+                }
+
                 &:hover {
                     color: white;
                     background: darkblue;
-                }
-
-                .actions {
-                    display: inline-block;
-                    float: right;
-                    cursor: pointer;
                 }
             }
             

@@ -1,0 +1,74 @@
+@import '../../../../sass/variables';
+
+.navbar-container {
+    width: 100vw;
+    color: $white;
+    background: $black;
+    height: 70px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+
+    .navbar-items {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .logo {
+            display: none;
+        }
+
+        .hamburger {
+            margin: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            span {
+                background: $white;
+                width: 17px;
+                height: 2px;
+                margin: 2px;
+            }
+
+            .ham-nav-short {
+                width: 14px;
+                height: 2px;
+            }
+        }
+
+        .navbar-item {
+            padding: 5px 15px;
+            color: $white;
+            font-size: 0.9rem;
+
+            img {
+                height: 30px;
+                width: 30px;
+                border-radius: 50%;
+            }
+
+            .username {
+                font-weight: bold;
+                padding: 0 10px;
+            }
+
+            .fa {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        .logo {
+            color: $white;
+            margin-right: auto;
+            margin-left: 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: block !important;
+        }
+    }
+}

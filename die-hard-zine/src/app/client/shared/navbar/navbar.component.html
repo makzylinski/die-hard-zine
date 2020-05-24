@@ -1,0 +1,79 @@
+<div 
+  [ngClass]="{'backdrop': hamVisible}"
+  (click)="toggleHamNav()"></div>
+<div class="navbar">
+  <nav class="navbar__main">
+    <ul class="navbar__items">
+      <li 
+        class="navbar__item hamburger"
+        (click)="toggleHamNav()">
+        <span></span>
+        <span class="ham-nav-short"></span>
+        <span></span>
+      </li>
+
+      <li class="navbar__item">
+        <a routerLink="" class="logo">Die Hard Magazine</a>
+      </li>
+
+      <div class="items-desktop">
+        <li class="navbar__item item-desktop" *ngFor="let subpage of subpages">
+          <a [routerLink]="subpage.path" class="logo">{{ subpage.name }}</a>
+        </li>
+      </div>
+      
+      <li class="navbar__item">
+        <div class="socials">
+          <div class="fa" (click)="goToFb()">
+            <a href="https://www.facebook.com/Die-Hard-Magazine-103033928028241"><span class="fab fa-facebook fa-lg"></span></a>
+          </div>
+
+          <div class="fa">
+            <a href="https://www.instagram.com/maxzylinskiofficial/"><span class="fab fa-instagram fa-lg"></span></a>
+          </div>
+          
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <div 
+    class="ham-nav--open"
+    *ngIf="hamVisible"
+    (click)="toggleHamNav()">
+    <ul class="ham-nav__items">
+      <li class="ham-nav__item">
+        <a routerLink="">Strona Główna</a>
+      </li>
+
+      <li class="ham-nav__item">
+        <a routerLink="news">Newsy</a>
+      </li>
+
+      <li class="ham-nav__item">
+        <a routerLink="event-reports">Relacje</a>
+      </li>
+
+      <li class="ham-nav__item">
+        <a routerLink="/reviews">Recenzje</a>
+      </li>
+
+      <li class="ham-nav__item">
+        <a routerLink="interview">Wywiady</a>
+      </li>
+
+      <li class="ham-nav__item">
+        <a routerLink="patronage">Patronaty</a>
+      </li>
+
+      <li class="ham-nav__item">
+        <a routerLink="about">O nas</a>
+      </li>
+
+      <li class="ham-nav__item">
+        <a routerLink="contact">Kontakt</a>
+      </li>
+
+    </ul>
+  </div>
+</div>

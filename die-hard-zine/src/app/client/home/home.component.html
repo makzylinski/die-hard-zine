@@ -1,0 +1,96 @@
+<app-page-content>
+    <div class="home-component">
+        <app-slider></app-slider>
+        <div class="home-content">
+
+            <div class="recent-section">
+
+                <div class="recent-header">
+                    <h1 class="recent-head">Ostatnie aktywności</h1>
+                </div>
+
+                <div class="recent-items">
+                    <div class="recent-item" *ngFor="let interview of interviews">
+
+                        <div class="recent-image">
+                            <img [src]="interview.photoUrl" [alt]="interview.headline">
+                        </div>
+
+                        <div class="recent-data">
+
+                            <div class="recent-meta">
+                                <div class="recent-type">
+                                    <h4 class="recent-type-header">News</h4>
+                                </div>
+                                <div class="recent-date">
+                                    <h4 class="recent-type-date">{{ interview.date | date }}</h4>
+                                </div>
+                            </div>
+
+                            <div class="recent-info">
+                                <p class="recent-info-content">{{ interview.headline }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Newsy -->
+
+            <div class="news-section">
+                <div class="news-header">
+                    <h1 class="news-head">Newsy</h1>
+                </div>
+                
+                <div class="news-items">
+                    <div class="news-item" *ngFor="let n of news">
+                        <div class="news-picture">
+                            <img [src]="n.photoUrl" alt="n.headline">
+                        </div>
+
+                        <div class="news-content">
+                            <div class="news-article-header">{{ n.headline }}</div>
+                            <div class="news-single-content">{{ n.content }}</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="more-news" type="button">Pokaż więcej</button>
+            </div>
+
+            <!-- Recenzje -->
+
+            <div class="reviews-section">
+                <div class="reviews-header">
+                    <h1 class="reviews-head">Recenzje</h1>
+                </div>
+
+                <div class="reviews-items">
+                    <div class="review-item" *ngFor="let review of reviews">
+
+                        <div class="review-image">
+                            <img [src]="review.photoUrl" [alt]="review.headline">
+                        </div>
+
+                        <div class="review-content">
+
+                            <div class="review-meta">
+                                <h2 class="review-header">{{ review.headline }}</h2>
+                                <h2 class="review-date">{{ review.date | date }}</h2>
+                            </div>
+
+                            <div class="review-info">
+                                <p>{{ review.content }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button
+                    class="more-news"
+                    type="button">Pokaż więcej</button>
+            </div>
+
+        </div>
+        <app-footer></app-footer>
+    </div>
+</app-page-content>

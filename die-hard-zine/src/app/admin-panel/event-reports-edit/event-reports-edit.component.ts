@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { EventReportService } from 'src/app/event-reports/event-report.service';
-import { EventReport } from 'src/app/event-reports/event-report.model';
+import { EventReportService } from 'src/app/client/event-reports/event-report.service';
+import { EventReport } from 'src/app/client/event-reports/event-report.model';
 
 @Component({
   selector: 'app-event-reports-edit',

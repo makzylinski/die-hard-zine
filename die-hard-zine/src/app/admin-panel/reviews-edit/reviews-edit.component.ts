@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { ReviewsService } from 'src/app/reviews/reviews.service';
-import { Review } from 'src/app/reviews/reviews.model';
+import { ReviewsService } from 'src/app/client/reviews/reviews.service';
+import { Review } from 'src/app/client/reviews/reviews.model';
 
 @Component({
   selector: 'app-reviews-edit',
