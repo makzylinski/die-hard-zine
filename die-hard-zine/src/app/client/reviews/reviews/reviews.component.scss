@@ -1,0 +1,108 @@
+@import "../../../../sass/variables";
+
+* {
+    box-sizing: border-box;
+}
+
+.reviews-component {
+    margin: 50px 20px;
+    .reviews-header {
+        width: 100%;
+        height: 75px;
+        background: $black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        .reviews-header-head {
+            font-size: 48px;
+            color: $white;
+            text-transform: uppercase;
+        }
+    }
+
+    .reviews-items {
+        margin: 50px 0;
+        position: relative;
+
+        .reviews-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+
+            .reviews-item-photo {
+                width: 100%;
+                height: 256px;
+                background-image: url("../../../../assets/pics/f4acd177-3281-43e1-9dc1-4eaa046ffb7a.png");
+                position: relative;
+            }
+
+            .reviews-content {
+                width: 100%;
+                background: rgba($color: $black, $alpha: 0.5);
+                overflow-wrap: break-word;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding-left: 25px;
+
+                .reviews-content-meta {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 100%;
+
+                    .reviews-content-header {
+                        width: 100%;
+
+                        h2 {
+                            color: $white;
+                            font-size: 24px;
+                            margin: 0;
+                        }
+                    }
+
+                    .reviews-description {
+                        p {
+                            color: $warmer-grey;
+                            margin: 5px 0;
+                            text-align: left;
+                        }
+
+                        p:after {
+                            content: '';
+                            display: block;
+                            width: 40%;
+                            height: 3px;
+                            background: $pea;
+                        }
+                        
+                    }
+                }
+
+                .reviews-date {
+                    p {
+                        color: $white;
+                        margin: 5px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .button-container {
+        padding-bottom: 30px;
+        .btn-show-more {
+            width: 100%;
+            height: 34px;
+            background: $white;
+            border: 2px solid $black;
+            font-weight: bold;
+        }
+    }
+}

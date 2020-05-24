@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Patronage } from 'src/app/patronage/patronage.model';
+import { Patronage } from 'src/app/client/patronage/patronage.model';
 import { ActivatedRoute } from '@angular/router';
-import { PatronageService } from 'src/app/patronage/patronage.service';
+import { PatronageService } from 'src/app/client/patronage/patronage.service';
 
 @Component({
   selector: 'app-patronage-edit',

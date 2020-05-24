@@ -16,9 +16,12 @@
         justify-content: flex-end;
         align-items: center;
 
+        .logo {
+            display: none;
+        }
+
         .hamburger {
-            margin-right: auto;
-            margin-left: 0.5rem;
+            margin: 0 1rem;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
@@ -60,7 +63,12 @@
 
     @media (min-width: 768px) {
         .logo {
-            display: block;
+            color: $white;
+            margin-right: auto;
+            margin-left: 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: block !important;
         }
     }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { NewsService } from 'src/app/news/news.service';
-import { News } from 'src/app/news/news.model';
+import { NewsService } from 'src/app/client/news/news.service';
+import { News } from 'src/app/client/news/news.model';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({

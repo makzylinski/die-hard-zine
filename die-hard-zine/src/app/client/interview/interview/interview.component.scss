@@ -1,0 +1,83 @@
+@import "../../../../sass/variables";
+
+.interview-component {
+    margin: 36px 20px 75px 20px;
+    box-sizing: border-box;
+    .interview-header {
+        width: 100%;
+        height: 75px;
+        background: $black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .interview-header-head {
+            font-size: 40px;
+            font-weight: bold;
+            color: $white;
+            text-transform: uppercase;
+        }
+    }
+
+    .interview-items {
+        margin: 50px 0;
+        position: relative;
+
+        .interview-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 80vw;
+            padding: 18px 0;
+            border-bottom: 3px solid $warm-grey;
+
+            .interview-item-photo {
+                width: 50%;
+                img {
+                    width: 100%;
+                    height: 160px;
+                }
+            }
+
+            .interview-content {
+                width: 50%;
+                overflow-wrap: break-word;
+                height: 160px;
+                padding: 0 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+
+                .interview-content-meta {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    text-align: center;
+
+                    .interview-date {
+                        width: 100%;
+                        font-size: 14px;
+                        color: $warmer-grey;
+                    }
+                }
+
+                .interview-info {
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    .button-container {
+        .btn-show-more {
+            width: 100%;
+            height: 34px;
+            background: $white;
+            border: 2px solid $black;
+            font-weight: bold;
+        }
+    }
+}

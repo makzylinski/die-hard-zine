@@ -1,0 +1,27 @@
+@import "../../../../sass/variables";
+
+.footer-component {
+    width: 100%;
+    background: $black;
+    position: relative;
+    bottom: 0;
+    left: 0;
+
+    .footer-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+        
+        .footer-item {
+            color: $greyish;
+
+            .implementation, .mock {
+                display: block;
+                padding-top: 10px;
+                color: $warmer-grey;
+            }
+        }
+    }
+}

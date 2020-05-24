@@ -2,11 +2,11 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AdminService } from './../admin.service';
-import { EventReport } from 'src/app/event-reports/event-report.model';
-import { Patronage } from 'src/app/patronage/patronage.model';
-import { Interview } from 'src/app/interview/interview.model';
-import { News } from 'src/app/news/news.model';
-import { Review } from 'src/app/reviews/reviews.model';
+import { EventReport } from 'src/app/client/event-reports/event-report.model';
+import { Patronage } from 'src/app/client/patronage/patronage.model';
+import { Interview } from 'src/app/client/interview/interview.model';
+import { News } from 'src/app/client/news/news.model';
+import { Review } from 'src/app/client/reviews/reviews.model';
 
 @Component({
   selector: 'app-articles-list',

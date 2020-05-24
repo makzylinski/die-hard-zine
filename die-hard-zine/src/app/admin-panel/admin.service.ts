@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 
-import { InterviewService } from '../interview/interview.service';
-import { NewsService } from '../news/news.service';
-import { ReviewsService } from '../reviews/reviews.service';
-import { EventReportService } from '../event-reports/event-report.service';
-import { PatronageService } from '../patronage/patronage.service';
-import { Interview } from '../interview/interview.model';
-import { EventReport } from '../event-reports/event-report.model';
-import { News } from '../news/news.model';
-import { Review } from '../reviews/reviews.model';
-import { Patronage } from '../patronage/patronage.model';
+import { InterviewService } from '../client/interview/interview.service';
+import { NewsService } from '../client/news/news.service';
+import { ReviewsService } from '../client/reviews/reviews.service';
+import { EventReportService } from '../client/event-reports/event-report.service';
+import { PatronageService } from '../client/patronage/patronage.service';
+import { Interview } from '../client/interview/interview.model';
+import { EventReport } from '../client/event-reports/event-report.model';
+import { News } from '../client/news/news.model';
+import { Review } from '../client/reviews/reviews.model';
+import { Patronage } from '../client/patronage/patronage.model';
 
 @Injectable({providedIn: 'root'})
 
